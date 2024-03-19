@@ -1,4 +1,4 @@
-import { ENDPOINT } from '../config.js'
+import { ENDPOINT_POKEMONS, ENDPOINT_TYPES } from '../config.js'
 
 export default class PokemonProvider {
 
@@ -10,7 +10,7 @@ export default class PokemonProvider {
            }
        };
        try {
-           const response = await fetch(`${ENDPOINT}?_limit=${limit}`, options)
+           const response = await fetch(`${ENDPOINT_POKEMONS}?_limit=${limit}`, options)
            const json = await response.json();
            return json
        } catch (err) {
@@ -26,11 +26,43 @@ export default class PokemonProvider {
            }
        };
        try {
-           const response = await fetch(`${ENDPOINT}/` + id, options)
+           const response = await fetch(`${ENDPOINT_POKEMONS}/` + id, options)
            const json = await response.json();
            return json
        } catch (err) {
-           console.log('Error getting documents', err)
+           console.log('Error getting pokemon', err)
        }
+    }
+
+    static fetchTypes = async () => {
+        const options = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        try {
+            const response = await fetch(`${ENDPOINT_TYPES}`, options);
+            const json = await response.json();
+            return json;
+        } catch (err) {
+            console.log('Error getting types', err);
+        }
+    }
+
+    static getType = async (id) => {
+        const options = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        try {
+            const response = await fetch(`${ENDPOINT_TYPES}/` + id, options);
+            const json = await response.json();
+            return json;
+        } catch (err) {
+            console.log('Error getting type', err);
+        }
     }
 }

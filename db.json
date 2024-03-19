@@ -2,30 +2,6 @@
     "pokemons": [
         {
             "id": "1",
-            "nom": "Pikachu",
-            "types": ["3"],
-            "stats_base": {
-                "PV": 35,
-                "Attaque": 55,
-                "Défense": 40,
-                "Vitesse": 90
-            },
-            "description": "Pikachu est un Pokémon souris connu pour ses joues électriques et sa queue en forme d'éclair.",
-            "evolution": {
-                "pré-évolution": "Pichu",
-                "évolution": "Raichu"
-            },
-            "taux_capture": 190,
-            "taille": "0.4 m",
-            "poids": "6.0 kg",
-            "faiblesses": ["6"],
-            "résistances": ["3", "4", "5"],
-            "capacités_spéciales": ["Statik"],
-            "localisation": ["Forêt de Jade", "Mont Selenite"],
-            "cri": "Pika pika!"
-        },
-        {
-            "id": "2",
             "nom": "Bulbizarre",
             "types": ["2", "1"],
             "stats_base": {
@@ -47,6 +23,30 @@
             "capacités_spéciales": ["Engrais"],
             "localisation": ["Forêt de Jade", "Cité Azur"],
             "cri": "Bulbizarre!"
+        },
+        {
+            "id": "4",
+            "nom": "Salameche",
+            "types": ["8"],
+            "stats_base": {
+              "PV": 39,
+              "Attaque": 52,
+              "Défense": 43,
+              "Vitesse": 65
+            },
+            "description": "Salameche dispose de flammes sur la queue qui indiquent son humeur. Plus elles sont intenses, plus ce Pokémon est agressif.",
+            "evolution": {
+              "pré-évolution": null,
+              "évolution": "Reptincel"
+            },
+            "taux_capture": 45,
+            "taille": "0.6 m",
+            "poids": "8.5 kg",
+            "faiblesses": ["2", "6"],
+            "résistances": ["3", "5", "15"],
+            "capacités_spéciales": ["Brasier"],
+            "localisation": ["Forêt de Jade", "Mont Selenite"],
+            "cri": "Salameche!"
         },
         {
         "id": "6",
@@ -73,6 +73,102 @@
         "cri": "Dracaufeu!"
         },
         {
+            "id": "7",
+            "nom": "Carapuce",
+            "types": ["9"],
+            "stats_base": {
+              "PV": 44,
+              "Attaque": 48,
+              "Défense": 65,
+              "Vitesse": 43
+            },
+            "description": "Carapuce possède une carapace très solide qui peut résister aux attaques les plus puissantes. Il est souvent vu flottant paisiblement à la surface de l'eau.",
+            "evolution": {
+              "pré-évolution": null,
+              "évolution": "Carabaffe"
+            },
+            "taux_capture": 45,
+            "taille": "0.5 m",
+            "poids": "9.0 kg",
+            "faiblesses": ["8", "2", "15"],
+            "résistances": ["9", "12"],
+            "capacités_spéciales": ["Torrent"],
+            "localisation": ["Lac Colère", "Mer Céleste"],
+            "cri": "Carapuce!"
+        },
+        {
+            "id": "23",
+            "nom": "Abo",
+            "types": ["1"],
+            "stats_base": {
+              "PV": 35,
+              "Attaque": 60,
+              "Défense": 44,
+              "Vitesse": 55
+            },
+            "description": "Abo est un Pokémon serpent venimeux. Il est connu pour sa capacité à se faufiler rapidement dans les endroits les plus étroits.",
+            "evolution": {
+              "pré-évolution": null,
+              "évolution": "Arbok"
+            },
+            "taux_capture": 255,
+            "taille": "2.0 m",
+            "poids": "6.9 kg",
+            "faiblesses": ["3", "4", "15"],
+            "résistances": ["1", "12"],
+            "capacités_spéciales": ["Intimidation"],
+            "localisation": ["Caverne Oubliée", "Marais Mystique"],
+            "cri": "Abo!"
+        },
+        {
+            "id": "33",
+            "nom": "Nidorino",
+            "types": ["1"],
+            "stats_base": {
+              "PV": 61,
+              "Attaque": 72,
+              "Défense": 57,
+              "Vitesse": 65
+            },
+            "description": "Nidorino est un Pokémon poison connu pour sa force brute et sa corne empoisonnée. Il peut être assez agressif lorsqu'il se sent menacé.",
+            "evolution": {
+              "pré-évolution": "Nidoran♂",
+              "évolution": "Nidoking"
+            },
+            "taux_capture": 120,
+            "taille": "0.9 m",
+            "poids": "19.5 kg",
+            "faiblesses": ["3", "4", "12", "17"],
+            "résistances": ["1", "8", "9", "14"],
+            "capacités_spéciales": ["Poison Point"],
+            "localisation": ["Forêt de Jade", "Mont Selenite"],
+            "cri": "Nidorino!"
+        },
+        {
+            "id": "52",
+            "nom": "Miaouss",
+            "types": ["7"],
+            "stats_base": {
+              "PV": 40,
+              "Attaque": 45,
+              "Défense": 35,
+              "Vitesse": 90
+            },
+            "description": "Miaouss est un Pokémon félin connu pour son amour des pièces de monnaie et sa capacité à utiliser ses griffes acérées en combat.",
+            "evolution": {
+              "pré-évolution": null,
+              "évolution": "Persian"
+            },
+            "taux_capture": 255,
+            "taille": "0.4 m",
+            "poids": "4.2 kg",
+            "faiblesses": ["2"],
+            "résistances": ["7"],
+            "capacités_spéciales": ["Pickup", "Technician", "Unnerve"],
+            "localisation": ["Cité Azur", "Port Azur"],
+            "cri": "Miaouss!"
+        },
+        {
         "id": "130",
         "nom": "Léviator",
         "types": ["9", "5"],
@@ -95,96 +191,120 @@
         "capacités_spéciales": ["Force pure"],
         "localisation": ["Lac Colère", "Mer Céleste"],
         "cri": "Léviator!"
+        },
+        {
+            "id": "25",
+            "nom": "Pikachu",
+            "types": ["3"],
+            "stats_base": {
+                "PV": 35,
+                "Attaque": 55,
+                "Défense": 40,
+                "Vitesse": 90
+            },
+            "description": "Pikachu est un Pokémon souris connu pour ses joues électriques et sa queue en forme d'éclair.",
+            "evolution": {
+                "pré-évolution": "Pichu",
+                "évolution": "Raichu"
+            },
+            "taux_capture": 190,
+            "taille": "0.4 m",
+            "poids": "6.0 kg",
+            "faiblesses": ["6"],
+            "résistances": ["3", "4", "5"],
+            "capacités_spéciales": ["Statik"],
+            "localisation": ["Forêt de Jade", "Mont Selenite"],
+            "cri": "Pika pika!"
         }
     ],
     "types": [
         {
-            "idType": "1",
+            "id": "1",
             "nomType": "Poison",
             "listePokemonsType": ["2"]
         },
         {
-            "idType": "2",
+            "id": "2",
             "nomType": "Plante",
             "listePokemonsType": ["2", "6"]
         },
         {
-            "idType": "3",
+            "id": "3",
             "nomType": "Électrique",
             "listePokemonsType": ["1"]
         },
         {
-            "idType": "4",
+            "id": "4",
             "nomType": "Acier",
             "listePokemonsType": []
         },
         {
-            "idType": "5",
+            "id": "5",
             "nomType": "Vol",
             "listePokemonsType": ["6", "130"]
         }
         ,{
-            "idType": "6",
+            "id": "6",
             "nomType": "Sol",
             "listePokemonsType": []
         },
         {
-            "idType": "7",
+            "id": "7",
             "nomType": "Normal",
             "listePokemonsType": []
         },
         {
-            "idType": "8",
+            "id": "8",
             "nomType": "Feu",
             "listePokemonsType": []
         },
         {
-            "idType": "9",
+            "id": "9",
             "nomType": "Eau",
             "listePokemonsType": ["130"]
         },
         {
-            "idType": "10",
+            "id": "10",
             "nomType": "Plante",
             "listePokemonsType": []
         },
         {
-            "idType": "11",
+            "id": "11",
             "nomType": "Glace",
             "listePokemonsType": []
         },
         {
-            "idType": "12",
+            "id": "12",
             "nomType": "Combat",
             "listePokemonsType": []
         },
         {
-            "idType": "13",
+            "id": "13",
             "nomType": "Psy",
             "listePokemonsType": []
         },
         {
-            "idType": "14",
+            "id": "14",
             "nomType": "Insecte",
             "listePokemonsType": []
         },
         {
-            "idType": "15",
+            "id": "15",
             "nomType": "Roche",
             "listePokemonsType": []
         },
         {
-            "idType": "16",
+            "id": "16",
             "nomType": "Spectre",
             "listePokemonsType": []
         },
         {
-            "idType": "17",
+            "id": "17",
             "nomType": "Dragon",
             "listePokemonsType": []
         },
         {
-            "idType": "18",
+            "id": "18",
             "nomType": "Ténèbres",
             "listePokemonsType": []
         }
