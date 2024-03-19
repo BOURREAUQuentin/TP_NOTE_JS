@@ -1,0 +1,192 @@
+{
+    "pokemons": [
+        {
+            "numeroPokedex": "1",
+            "nom": "Pikachu",
+            "types": ["3"],
+            "stats_base": {
+                "PV": 35,
+                "Attaque": 55,
+                "Défense": 40,
+                "Vitesse": 90
+            },
+            "description": "Pikachu est un Pokémon souris connu pour ses joues électriques et sa queue en forme d'éclair.",
+            "evolution": {
+                "pré-évolution": "Pichu",
+                "évolution": "Raichu"
+            },
+            "taux_capture": 190,
+            "taille": "0.4 m",
+            "poids": "6.0 kg",
+            "faiblesses": ["6"],
+            "résistances": ["3", "4", "5"],
+            "capacités_spéciales": ["Statik"],
+            "localisation": ["Forêt de Jade", "Mont Selenite"],
+            "cri": "Pika pika!"
+        },
+        {
+            "numeroPokedex": "2",
+            "nom": "Bulbizarre",
+            "types": ["2", "1"],
+            "stats_base": {
+              "PV": 45,
+              "Attaque": 49,
+              "Défense": 49,
+              "Vitesse": 45
+            },
+            "description": "Bulbizarre peut être vu en train de faire la sieste sous un soleil éclatant. Il a une graine sur le dos. En absorbant les rayons du soleil, la graine devient de plus en plus grande.",
+            "evolution": {
+              "pré-évolution": null,
+              "évolution": "Herbizarre"
+            },
+            "taux_capture": 45,
+            "taille": "0.7 m",
+            "poids": "6.9 kg",
+            "faiblesses": ["5", "6"],
+            "résistances": ["2", "1"],
+            "capacités_spéciales": ["Engrais"],
+            "localisation": ["Forêt de Jade", "Cité Azur"],
+            "cri": "Bulbizarre!"
+        },
+        {
+        "numeroPokedex": "6",
+        "nom": "Dracaufeu",
+        "types": ["2", "5"],
+        "stats_base": {
+            "PV": 78,
+            "Attaque": 84,
+            "Défense": 78,
+            "Vitesse": 100
+        },
+        "description": "Dracaufeu est capable de voler à des altitudes extrêmement élevées. Il souffle de puissantes flammes chaudes qui réduisent tout en cendres.",
+        "evolution": {
+            "pré-évolution": "Reptincel",
+            "évolution": null
+        },
+        "taux_capture": 5,
+        "taille": "1.7 m",
+        "poids": "90.5 kg",
+        "faiblesses": ["2", "6"],
+        "résistances": ["3", "5", "15"],
+        "capacités_spéciales": ["Brasier"],
+        "localisation": ["Mont Selenite", "Mont Argenté"],
+        "cri": "Dracaufeu!"
+        },
+        {
+        "numeroPokedex": "130",
+        "nom": "Léviator",
+        "types": ["9", "5"],
+        "stats_base": {
+            "PV": 95,
+            "Attaque": 125,
+            "Défense": 79,
+            "Vitesse": 81
+        },
+        "description": "Léviator est un puissant prédateur aquatique. Il est capable de sauter de l'eau pour attraper ses proies et de voler sur de longues distances.",
+        "evolution": {
+            "pré-évolution": "Magicarpe",
+            "évolution": null
+        },
+        "taux_capture": 25,
+        "taille": "6.5 m",
+        "poids": "235.0 kg",
+        "faiblesses": ["8", "2", "15"],
+        "résistances": ["9", "12"],
+        "capacités_spéciales": ["Force pure"],
+        "localisation": ["Lac Colère", "Mer Céleste"],
+        "cri": "Léviator!"
+        }
+    ],
+    "types": [
+        {
+            "idType": "1",
+            "nomType": "Poison",
+            "listePokemonsType": ["2"]
+        },
+        {
+            "idType": "2",
+            "nomType": "Plante",
+            "listePokemonsType": ["2", "6"]
+        },
+        {
+            "idType": "3",
+            "nomType": "Électrique",
+            "listePokemonsType": ["1"]
+        },
+        {
+            "idType": "4",
+            "nomType": "Acier",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "5",
+            "nomType": "Vol",
+            "listePokemonsType": ["6", "130"]
+        }
+        ,{
+            "idType": "6",
+            "nomType": "Sol",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "7",
+            "nomType": "Normal",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "8",
+            "nomType": "Feu",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "9",
+            "nomType": "Eau",
+            "listePokemonsType": ["130"]
+        },
+        {
+            "idType": "10",
+            "nomType": "Plante",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "11",
+            "nomType": "Glace",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "12",
+            "nomType": "Combat",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "13",
+            "nomType": "Psy",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "14",
+            "nomType": "Insecte",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "15",
+            "nomType": "Roche",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "16",
+            "nomType": "Spectre",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "17",
+            "nomType": "Dragon",
+            "listePokemonsType": []
+        },
+        {
+            "idType": "18",
+            "nomType": "Ténèbres",
+            "listePokemonsType": []
+        }
+    ]
+  }
