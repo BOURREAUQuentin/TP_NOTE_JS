@@ -11,7 +11,7 @@ const routes = {
     '/'                     : Home
     , '/about'              : About
     , '/pokemons'           : PokemonAll
-    , '/pokemon/:id'       : PokemonShow
+    , '/pokemons/:id'       : PokemonShow
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
