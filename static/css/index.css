@@ -1,0 +1,70 @@
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul img  {
+    width: 5rem;
+    height: 5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.navAnim{
+    background-image: linear-gradient(#EA4E4E, #EA4E4E);
+    background-size: 2rem 0.07em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+    margin-right: 7rem;
+}
+
+.dark .navAnim:hover{
+    background-image: linear-gradient(#F4F4F4, #F4F4F4);
+    background-size: 100% 0.07em;
+}
+
+.light .navAnim:hover{
+    background-image: linear-gradient(#222222, #222222);
+    background-size: 100% 0.07em;
+}
+
+.light{
+    background-color: #F4F4F4;
+    color: #222222;
+    transition-duration: 1s;
+}
+
+.dark{
+    background-color: #222222;
+    color: #F4F4F4;
+    transition-duration: 400ms;
+}
+
+.light a, .light p, .light h1, .light h2, .light h3, .light h4, .light li, .light span{
+    color: #222222;
+    transition-duration: 400ms;
+}   
+
+.dark a, .dark p, .dark h1, .dark h2, .dark h3, .dark h4, .dark li, .dark span{
+    color: #F4F4F4;
+    transition-duration: 400ms;
+}
+
+.rotated-image {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
