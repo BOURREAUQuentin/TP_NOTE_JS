@@ -25,7 +25,7 @@ export default class PokemonShow {
         let view = /*html*/`
             <section class="section">
                 <h1> Numéro dans le pokédex : ${pokemon.id}</h1>
-                <p> Nom : ${pokemon.nom} </p>
+                <h2> Nom : ${pokemon.nom} </h2>
                 <p> Description : ${pokemon.description} </p>
                 <p> Types : ${typeNames.join(', ')} </p>
                 <p> Taille : ${pokemon.taille} </p>

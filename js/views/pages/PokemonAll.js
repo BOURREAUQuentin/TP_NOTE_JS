@@ -17,7 +17,7 @@ export default class PokemonAll {
                                 <div class="btn-group">
                                 <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary">Voir ${pokemon.nom}</a>
                                 </div>
-                                <small class="text-body-secondary">${pokemon.id}</small>
+                                <small class="text-body-secondary">Numéro pokédex : ${pokemon.id}</small>
                             </div>
                         </div>
                     </div>

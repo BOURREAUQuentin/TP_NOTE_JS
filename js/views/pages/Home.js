@@ -13,9 +13,9 @@ export default class Home {
                     <p class="card-text">${pokemon.description ? pokemon.description.slice(0, 100) : ''}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                        <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary">+ détail sur ${pokemon.nom}</a>
+                        <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary">+ détails sur ${pokemon.nom}</a>
                         </div>
-                        <small class="text-body-secondary">${pokemon.id}</small>
+                        <small class="text-body-secondary">Numéro pokédex : ${pokemon.id}</small>
                     </div>
                 </div>
             </div>
