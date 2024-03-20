@@ -22,7 +22,8 @@
             "résistances": ["2", "1"],
             "capacités_spéciales": ["Engrais"],
             "localisation": ["Forêt de Jade", "Cité Azur"],
-            "cri": "Bulbizarre!"
+            "cri": "Bulbizarre!",
+            "note" : 4
         },
         {
             "id": "4",
@@ -46,7 +47,8 @@
             "résistances": ["3", "5", "15"],
             "capacités_spéciales": ["Brasier"],
             "localisation": ["Forêt de Jade", "Mont Selenite"],
-            "cri": "Salameche!"
+            "cri": "Salameche!",
+            "note" : 3
         },
         {
         "id": "6",
@@ -70,7 +72,8 @@
         "résistances": ["3", "5", "15"],
         "capacités_spéciales": ["Brasier"],
         "localisation": ["Mont Selenite", "Mont Argenté"],
-        "cri": "Dracaufeu!"
+        "cri": "Dracaufeu!",
+        "note" : 4
         },
         {
             "id": "7",
@@ -94,7 +97,8 @@
             "résistances": ["9", "12"],
             "capacités_spéciales": ["Torrent"],
             "localisation": ["Lac Colère", "Mer Céleste"],
-            "cri": "Carapuce!"
+            "cri": "Carapuce!",
+            "note" : 2
         },
         {
             "id": "23",
@@ -118,7 +122,8 @@
             "résistances": ["1", "12"],
             "capacités_spéciales": ["Intimidation"],
             "localisation": ["Caverne Oubliée", "Marais Mystique"],
-            "cri": "Abo!"
+            "cri": "Abo!",
+            "note" : 4
         },
         {
             "id": "25",
@@ -142,7 +147,8 @@
             "résistances": ["3", "4", "5"],
             "capacités_spéciales": ["Statik"],
             "localisation": ["Forêt de Jade", "Mont Selenite"],
-            "cri": "Pika pika!"
+            "cri": "Pika pika!",
+            "note" : 5
         },
         {
             "id": "33",
@@ -166,7 +172,8 @@
             "résistances": ["1", "8", "9", "14"],
             "capacités_spéciales": ["Poison Point"],
             "localisation": ["Forêt de Jade", "Mont Selenite"],
-            "cri": "Nidorino!"
+            "cri": "Nidorino!",
+            "note" : 2
         },
         {
             "id": "52",
@@ -190,7 +197,8 @@
             "résistances": ["7"],
             "capacités_spéciales": ["Pickup", "Technician", "Unnerve"],
             "localisation": ["Cité Azur", "Port Azur"],
-            "cri": "Miaouss!"
+            "cri": "Miaouss!",
+            "note" : 1
         },
         {
             "id": "54",
@@ -214,7 +222,8 @@
             "résistances": ["9", "12"],
             "capacités_spéciales": ["Regard Vif", "Sniper"],
             "localisation": ["Lac Colère", "Rivière du Repos"],
-            "cri": "Psykokwak!"
+            "cri": "Psykokwak!",
+            "note" : 6
         },
         {
             "id": "64",
@@ -238,7 +247,8 @@
             "résistances": ["3", "4"],
             "capacités_spéciales": ["Synchronise"],
             "localisation": ["Caverne Oubliée", "Mont Selenite"],
-            "cri": "Kadabra!"
+            "cri": "Kadabra!",
+            "note" : 3
         },
         {
             "id": "78",
@@ -262,7 +272,8 @@
             "résistances": ["7"],
             "capacités_spéciales": ["Fuite", "Corps Ardent"],
             "localisation": ["Plaine Enchantée", "Colline de la Brise"],
-            "cri": "Galopa!"
+            "cri": "Galopa!",
+            "note" : 0
         },
         {
             "id": "83",
@@ -286,7 +297,8 @@
             "résistances": ["2", "4", "14"],
             "capacités_spéciales": ["Fuite", "Chanceux"],
             "localisation": ["Forêt de Jade", "Plaine Enchantée"],
-            "cri": "Canarticho!"
+            "cri": "Canarticho!",
+            "note" : 0
         },
         {
             "id": "130",
@@ -310,7 +322,8 @@
             "résistances": ["9", "12"],
             "capacités_spéciales": ["Force pure"],
             "localisation": ["Lac Colère", "Mer Céleste"],
-            "cri": "Léviator!"
+            "cri": "Léviator!",
+            "note" : 0
         }
     ],
     "types": [
