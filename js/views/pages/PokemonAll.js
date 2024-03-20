@@ -4,7 +4,6 @@ export default class PokemonAll {
 
     async render () {
         let pokemons = await PokemonProvider.fetchPokemons(50);
-        alert( localStorage.getItem('test') );
         let view =  /*html*/`
             <h2>Tous les pokémons</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

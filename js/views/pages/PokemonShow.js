@@ -44,7 +44,7 @@ export default class PokemonShow {
                 <p> Localisation : ${pokemon.localisation.join(', ')} </p>
                 <p> Cri : ${pokemon.cri} </p>
             </section>
-            <button id="toggleFavorite">${buttonText}</button>
+            <button id="toggleFavoris">${buttonText}</button>
             <p><a href="/">Retour à l'accueil</a></p>
             <p><a href="#/pokemons">Retour à tous les pokémons</a></p>
         `;
@@ -52,27 +52,27 @@ export default class PokemonShow {
         return view;
     }
 
-    async toggleFavorite(toggleFavoriteButton) {
+    async toggleFavori(toggleFavoriteButton) {
         let request = Utils.parseRequestURL();
         let pokemonId = request.id;
 
-        // Récupérer les favoris actuels depuis le stockage local
+        // récupère les favoris actuels depuis le stockage local
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-        // Vérifier si le Pokémon est déjà en favori
+        // vérifie si le Pokémon est déjà en favori
         let index = favorites.indexOf(pokemonId);
         if (index !== -1) {
-            // Le Pokémon est déjà en favori, donc le supprimer
+            // le pokémon est déjà en favori, donc le supprimer
             favorites.splice(index, 1);
         } else {
-            // Le Pokémon n'est pas en favori, donc l'ajouter
+            // le pokémon n'est pas en favori, donc l'ajouter
             favorites.push(pokemonId);
         }
 
-        // Mettre à jour les favoris dans le stockage local
+        // mise à jour des favoris dans le stockage local
         localStorage.setItem('favorites', JSON.stringify(favorites));
 
-        // Mettre à jour le libellé du bouton en fonction de l'état actuel des favoris
+        // mise à jour du libellé du bouton en fonction de l'état actuel des favoris
         toggleFavoriteButton.textContent = index !== -1 ? 'Ajouter en favoris' : 'Retirer des favoris';
     }
 }

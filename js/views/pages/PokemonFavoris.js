@@ -1,7 +1,18 @@
+import PokemonProvider from '../../services/PokemonProvider.js';
+
 export default class PokemonFavoris {
 
     async render () {
+        // Récupérer les favoris depuis le stockage local
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         let pokemons = [];
+
+        // Récupérer les détails de chaque pokémon favori
+        for (let favoriteId of favorites) {
+            let pokemon = await PokemonProvider.getPokemon(favoriteId);
+            pokemons.push(pokemon);
+        }
+
         let view =  /*html*/`
             <h2>Vos pokémons favoris</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -24,8 +35,8 @@ export default class PokemonFavoris {
                     ).join('\n ')
                 }
             </div>
-        `
+        `;
+
         return view;
     }
-
 }

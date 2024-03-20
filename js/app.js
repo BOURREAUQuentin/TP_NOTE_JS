@@ -33,11 +33,10 @@ const router = async () => {
     
     content.innerHTML = await page.render();
 
-    // Si la page a la méthode toggleFavorite (donc PokemonShow)
-    if (page.toggleFavorite) {
-        const toggleFavoriteButton = document.getElementById('toggleFavorite');
-        console.log(toggleFavoriteButton.textContent);
-        toggleFavoriteButton.addEventListener('click', () => page.toggleFavorite(toggleFavoriteButton));
+    // si la page a la méthode toggleFavori (donc PokemonShow)
+    if (page.toggleFavori) {
+        const toggleFavorisButton = document.getElementById('toggleFavoris');
+        toggleFavorisButton.addEventListener('click', () => page.toggleFavori(toggleFavorisButton));
     }
 }
 
