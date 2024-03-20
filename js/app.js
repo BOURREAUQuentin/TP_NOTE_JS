@@ -1,6 +1,7 @@
 import Home from './views/pages/Home.js';
 import PokemonAll from './views/pages/PokemonAll.js';
 import PokemonShow from './views/pages/PokemonShow.js';
+import PokemonFavoris from './views/pages/PokemonFavoris.js';
 import About from './views/pages/About.js';
 import Error404 from './views/pages/Error404.js';
 
@@ -12,6 +13,7 @@ const routes = {
     , '/about'              : About
     , '/pokemons'           : PokemonAll
     , '/pokemons/:id'       : PokemonShow
+    , '/favoris'       : PokemonFavoris
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
@@ -30,6 +32,13 @@ const router = async () => {
     let page = routes[parsedURL] ? new routes[parsedURL] : Error404
     
     content.innerHTML = await page.render();
+
+    // Si la page a la méthode toggleFavorite (donc PokemonShow)
+    if (page.toggleFavorite) {
+        const toggleFavoriteButton = document.getElementById('toggleFavorite');
+        console.log(toggleFavoriteButton.textContent);
+        toggleFavoriteButton.addEventListener('click', () => page.toggleFavorite(toggleFavoriteButton));
+    }
 }
 
 // Listen on hash change:

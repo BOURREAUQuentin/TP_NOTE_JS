@@ -1,12 +1,9 @@
-import PokemonProvider from "../../services/PokemonProvider.js";
-
-export default class PokemonAll {
+export default class PokemonFavoris {
 
     async render () {
-        let pokemons = await PokemonProvider.fetchPokemons(50);
-        alert( localStorage.getItem('test') );
+        let pokemons = [];
         let view =  /*html*/`
-            <h2>Tous les pokémons</h2>
+            <h2>Vos pokémons favoris</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 ${ pokemons.map(pokemon => 
                     /*html*/`
@@ -28,7 +25,7 @@ export default class PokemonAll {
                 }
             </div>
         `
-        return view
+        return view;
     }
 
 }
