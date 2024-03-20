@@ -13,9 +13,9 @@ export default class Home {
                     <p class="card-text">${pokemon.description ? pokemon.description.slice(0, 100) : ''}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                        <a href="#/pokemons/${pokemon.numeroPokedex}" class="btn btn-sm btn-outline-secondary">+ détail sur ${pokemon.nom}</a>
+                        <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary">+ détails sur ${pokemon.nom}</a>
                         </div>
-                        <small class="text-body-secondary">${pokemon.numeroPokedex}</small>
+                        <small class="text-body-secondary">Numéro pokédex : ${pokemon.id}</small>
                     </div>
                 </div>
             </div>
@@ -27,16 +27,12 @@ export default class Home {
             <section class="py-5 text-center container">
                 <div class="row py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
-                        <h1 class="fw-light">Articles example</h1>
-                        <p class="lead text-body-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, aliquid voluptas sit aperiam quis architecto quaerat vel ratione placeat delectus repellendus cum animi sequi amet corporis minima ab, nisi at!</p>
-                        <p>
-                            <a href="" class="btn btn-primary my-2">Main call to action</a>
-                            <a href="" class="btn btn-secondary my-2">Secondary action</a>
-                        </p>
+                        <h1 class="fw-light">Bienvenue sur le site Poképedia</h1>
+                        <p class="lead text-body-secondary">Poképedia est une encyclopédie en ligne complète dédiée à l'univers des Pokémon. Notre site offre une multitude de ressources et d'informations pour les fans de tous âges et de tous niveaux d'expérience. Que vous soyez un joueur passionné, un collectionneur de cartes Pokémon, un fan de l'anime ou simplement curieux de découvrir cet univers captivant, Poképedia est l'endroit idéal pour explorer et en apprendre davantage sur vos créatures préférées.</p>
                     </div>
                 </div>
             </section>
-            <h2>Les 3 premiers articles</h2>
+            <h2>Les 3 premiers pokémons</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 ${html}
             </div>
