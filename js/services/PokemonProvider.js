@@ -34,6 +34,23 @@ export default class PokemonProvider {
        }
     }
 
+    static search = async (term) => {
+        const options = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        try {
+            const response = await fetch(`${ENDPOINT_POKEMONS}?q=${term}`, options);
+            const json = await response.json();
+            return json;
+        } catch (err) {
+            console.log('Error searching pokemons', err);
+            return [];
+        }
+    }
+
     static fetchTypes = async () => {
         const options = {
             method: 'GET',

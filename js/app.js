@@ -2,6 +2,7 @@ import Home from './views/pages/Home.js';
 import PokemonAll from './views/pages/PokemonAll.js';
 import PokemonShow from './views/pages/PokemonShow.js';
 import PokemonFavoris from './views/pages/PokemonFavoris.js';
+import PokemonSearch from './views/pages/PokemonSearch.js';
 import About from './views/pages/About.js';
 import Error404 from './views/pages/Error404.js';
 
@@ -14,6 +15,7 @@ const routes = {
     , '/pokemons'           : PokemonAll
     , '/pokemons/:id'       : PokemonShow
     , '/favoris'       : PokemonFavoris
+    , '/search'       : PokemonSearch
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
