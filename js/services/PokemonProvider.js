@@ -35,16 +35,15 @@ export default class PokemonProvider {
     }
 
     static search = async (term) => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
         try {
-            const response = await fetch(`${ENDPOINT_POKEMONS}?q=${term}`, options);
-            const json = await response.json();
-            return json;
+            const allPokemons = await this.fetchPokemons();
+    
+            // filtre les pokémons en fonction de la chaîne de recherche
+            const pokemonsSearch = allPokemons.filter(pokemon => {
+                return pokemon.nom.toLowerCase().includes(term.toLowerCase());
+            });
+    
+            return pokemonsSearch;
         } catch (err) {
             console.log('Error searching pokemons', err);
             return [];

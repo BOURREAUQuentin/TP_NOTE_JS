@@ -40,6 +40,14 @@ const router = async () => {
         const toggleFavorisButton = document.getElementById('toggleFavoris');
         toggleFavorisButton.addEventListener('click', () => page.toggleFavori(toggleFavorisButton));
     }
+
+    if (page instanceof PokemonSearch) {
+        // ajoute un evenement pour voir si le bouton Rechercher est de nouveau cliqué donc il faut recharger la nouvelle page
+        let searchLink = document.querySelector('a[href="#/search"]');
+        if (searchLink) {
+            searchLink.addEventListener('click', () => window.location.reload());
+        }
+    }
 }
 
 // Listen on hash change:
