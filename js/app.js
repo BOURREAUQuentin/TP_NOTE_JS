@@ -38,10 +38,6 @@ const router = async () => {
         page.currentPage = parseInt(request.verb); // on charge la currentPage de l'url de la page actuelle
     }
 
-    console.log(parsedURL);
-    console.log(page);
-    console.log(request);
-
     content.innerHTML = await page.render();
 
     if (page instanceof PokemonShow) {
