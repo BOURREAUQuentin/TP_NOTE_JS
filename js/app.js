@@ -12,7 +12,7 @@ import Utils from './services/Utils.js';
 const routes = {
     '/'                     : Home
     , '/about'              : About
-    , '/pokemons'           : PokemonAll
+    , '/pokemons/page/:id'           : PokemonAll
     , '/pokemons/:id'       : PokemonShow
     , '/favoris'       : PokemonFavoris
     , '/search'       : PokemonSearch
@@ -28,15 +28,23 @@ const router = async () => {
     let request = Utils.parseRequestURL()
 
     // Parse the URL and if it has an id part, change it with the string ":id"
-    let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')
+    let parsedURL = request.resource === 'pokemons' && request.id === 'page' ? '/pokemons/page/:id' : (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '');
+
     // Get the page from our hash of supported routes.
     // If the parsed URL is not in our list of supported routes, select the 404 page instead
     let page = routes[parsedURL] ? new routes[parsedURL] : Error404
-    
+
+    if (page instanceof PokemonAll){
+        page.currentPage = parseInt(request.verb); // on charge la currentPage de l'url de la page actuelle
+    }
+
+    console.log(parsedURL);
+    console.log(page);
+    console.log(request);
+
     content.innerHTML = await page.render();
 
-    // si la page a la méthode toggleFavori (donc PokemonShow)
-    if (page.toggleFavori) {
+    if (page instanceof PokemonShow) {
         const toggleFavorisButton = document.getElementById('toggleFavoris');
         toggleFavorisButton.addEventListener('click', () => page.toggleFavori(toggleFavorisButton));
     }
@@ -48,6 +56,20 @@ const router = async () => {
             searchLink.addEventListener('click', () => window.location.reload());
         }
     }
+}
+
+// Fonction pour aller à la page précédente
+function previousPage() {
+    const currentPage = parseInt(Utils.parseRequestURL().id);
+    if (currentPage > 1) {
+        window.location.hash = `#/pokemons/page/${currentPage - 1}`;
+    }
+}
+
+// Fonction pour aller à la page suivante
+function nextPage() {
+    const currentPage = parseInt(Utils.parseRequestURL().id);
+    window.location.hash = `#/pokemons/page/${currentPage + 1}`;
 }
 
 // Listen on hash change:
