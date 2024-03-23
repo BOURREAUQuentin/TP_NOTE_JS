@@ -1,8 +1,8 @@
 import PokemonProvider from '../../services/PokemonProvider.js';
 
 export default class PokemonAll {
-    constructor(currentPage = 1) {
-        this.currentPage = currentPage;
+    constructor() {
+        this.currentPage = 1;
         this.limit = 6; // Nombre de Pokémon par page
         this.totalPages = 0; // Nombre total de pages
         this.allPokemons = []; // Liste complète de tous les pokémons

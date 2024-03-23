@@ -317,7 +317,7 @@
         {
             "id": "1",
             "nomType": "Poison",
-            "listePokemonsType": ["2"]
+            "listePokemonsType": ["2", "23", "33"]
         },
         {
             "id": "2",
@@ -327,7 +327,7 @@
         {
             "id": "3",
             "nomType": "Électrique",
-            "listePokemonsType": ["1"]
+            "listePokemonsType": ["1", "25"]
         },
         {
             "id": "4",
@@ -347,17 +347,17 @@
         {
             "id": "7",
             "nomType": "Normal",
-            "listePokemonsType": []
+            "listePokemonsType": ["52", "78", "83"]
         },
         {
             "id": "8",
             "nomType": "Feu",
-            "listePokemonsType": []
+            "listePokemonsType": ["4"]
         },
         {
             "id": "9",
             "nomType": "Eau",
-            "listePokemonsType": ["130"]
+            "listePokemonsType": ["9", "54", "130"]
         },
         {
             "id": "10",
@@ -377,12 +377,12 @@
         {
             "id": "13",
             "nomType": "Psy",
-            "listePokemonsType": []
+            "listePokemonsType": ["64"]
         },
         {
             "id": "14",
             "nomType": "Insecte",
-            "listePokemonsType": []
+            "listePokemonsType": ["83"]
         },
         {
             "id": "15",

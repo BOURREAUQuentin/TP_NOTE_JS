@@ -81,4 +81,22 @@ export default class PokemonProvider {
             console.log('Error getting type', err);
         }
     }
+
+    static filtre = async (idType) => {
+        try {
+            const allPokemons = await this.fetchPokemons();
+            const type = await this.getType(idType);
+    
+            // Liste des id de pokémons correspondant au type spécifié
+            const pokemonIds = type.listePokemonsType;
+    
+            // Convertir les id de pokémons en objets de pokémons complets
+            const pokemonsFiltres = allPokemons.filter(pokemon => pokemonIds.includes(pokemon.id));
+    
+            return pokemonsFiltres;
+        } catch (err) {
+            console.log('Error filtering pokemons', err);
+            return [];
+        }
+    }
 }
