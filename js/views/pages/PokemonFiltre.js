@@ -34,6 +34,8 @@ export default class PokemonFiltre {
                     '<h6>Aucun pokémon trouvé !</h6>'
                 }
             </div>
+            <p><a href="/">Retour à l'accueil</a></p>
+            <p><a href="#/pokemons/page/1">Retour à tous les pokémons</a></p>
         `;
         return view;
     }

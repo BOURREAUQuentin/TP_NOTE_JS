@@ -46,7 +46,7 @@ export default class PokemonShow {
             </section>
             <button id="toggleFavoris">${buttonText}</button>
             <p><a href="/">Retour à l'accueil</a></p>
-            <p><a href="#/pokemons">Retour à tous les pokémons</a></p>
+            <p><a href="#/pokemons/page/1">Retour à tous les pokémons</a></p>
         `;
 
         return view;

@@ -6,41 +6,38 @@ export default class PokemonAll {
         this.limit = 6; // Nombre de Pokémon par page
         this.totalPages = 0; // Nombre total de pages
         this.allPokemons = []; // Liste complète de tous les pokémons
+        this.types = []; // Liste des types de pokémons
     }
 
     async render() {
-        // Récupérer tous les pokémons une seule fois lors du premier rendu
         if (this.allPokemons.length === 0) {
             this.allPokemons = await PokemonProvider.fetchPokemons();
             this.totalPages = Math.ceil(this.allPokemons.length / this.limit);
         }
 
-        // Obtenir les pokémons de la page actuelle en fonction de la pagination
+        // Récupération des types de pokémons une seule fois lors du premier rendu
+        if (this.types.length === 0) {
+            this.types = await PokemonProvider.fetchTypes();
+        }
+
+        // Récupération des pokémons de la page actuelle en fonction de la pagination
         const startIndex = (this.currentPage - 1) * this.limit;
         const endIndex = startIndex + this.limit;
-        const pokemons = this.allPokemons.slice(startIndex, endIndex);
+        let pokemons = this.allPokemons.slice(startIndex, endIndex);
 
-        // Gestion de l'affichage de la balise de page précédente
-        let previousHref = `#/pokemons/page/${this.currentPage - 1}`;
-        let previousLink = `<a href="${previousHref}">Page ${this.currentPage - 1}</a>`;
-        // Si on est sur la 1ère page, on n'affiche pas la balise
-        if (this.currentPage === 1) {
-            previousLink = ``;
-        }
+        // Génération des boutons de filtrage par type
+        const typeButtons = this.types.map(type => {
+            return `<a class="btn btn-sm btn-outline-secondary" style="text-decoration:none;" href="#/pokemons/filtre/${type.id}">${type.nomType}</a>`;
+        });
 
-        // Gestion de l'affichage de la balise de page suivante
-        let nextHref = `#/pokemons/page/${this.currentPage + 1}`;
-        let nextLink = `<a href="${nextHref}">Page ${this.currentPage + 1}</a>`;
-        // Si on est sur la dernière page, on n'affiche pas la balise
-        if (this.currentPage === this.totalPages) {
-            nextLink = ``;
-        }
-    
         let view = /*html*/`
             <h2>Tous les pokémons</h2>
             <h6>Page ${this.currentPage} / ${this.totalPages}</h6>
+            <div>
+                ${typeButtons.join('\n')}
+            </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                ${ pokemons.map(pokemon => 
+                ${pokemons.map(pokemon => 
                     /*html*/`
                     <div class="col">
                         <div class="card shadow-sm">
@@ -59,10 +56,29 @@ export default class PokemonAll {
                 ).join('\n ')}
             </div>
             <div class="pagination">
-                ${previousLink}
-                ${nextLink}
+                ${this.renderPagination()}
             </div>
         `;
         return view;
+    }
+
+    renderPagination() {
+        // Gestion de l'affichage de la balise de page précédente
+        let previousHref = `#/pokemons/page/${this.currentPage - 1}`;
+        let previousLink = `<a class="btn btn-sm btn-outline-secondary" href="${previousHref}">Page ${this.currentPage - 1}</a>`;
+        // Si on est sur la 1ère page, on n'affiche pas la balise
+        if (this.currentPage === 1) {
+            previousLink = ``;
+        }
+
+        // Gestion de l'affichage de la balise de page suivante
+        let nextHref = `#/pokemons/page/${this.currentPage + 1}`;
+        let nextLink = `<a class="btn btn-sm btn-outline-secondary" href="${nextHref}">Page ${this.currentPage + 1}</a>`;
+        // Si on est sur la dernière page, on n'affiche pas la balise
+        if (this.currentPage === this.totalPages) {
+            nextLink = ``;
+        }
+
+        return `${previousLink} ${nextLink}`;
     }
 }
