@@ -82,6 +82,23 @@ export default class PokemonProvider {
         }
     }
 
+    static changeRating = async (id, rating) => {
+        const options = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ note: rating })
+        };
+        try {
+            const response = await fetch(`${ENDPOINT_POKEMONS}/` + id, options);
+            const json = await response.json();
+            return json;
+        } catch (err) {
+            console.log('Error updating rating', err);
+        }
+    }
+    
     static filtre = async (idType) => {
         try {
             const allPokemons = await this.fetchPokemons();

@@ -1,10 +1,15 @@
 import Utils from '../../services/Utils.js';
+import { generateStars } from '../../services/Utils.js';
 import PokemonProvider from '../../services/PokemonProvider.js';
 
 export default class PokemonShow {
+    constructor() {
+        this.pokemon = null;
+    }
+
     async render() {
         let request = Utils.parseRequestURL();
-        let pokemon = await PokemonProvider.getPokemon(request.id);
+        this.pokemon = await PokemonProvider.getPokemon(request.id);
         let typesData = await PokemonProvider.fetchTypes();
 
         // Vérifier si le Pokémon est déjà en favoris
@@ -20,35 +25,50 @@ export default class PokemonShow {
             typeMap[type.id] = type.nomType;
         });
 
-        // Conversion des id de types en noms de types pour les types du Pokémon
-        const typeNames = pokemon.types.map(typeId => typeMap[typeId]);
+        typeNames = this.pokemon.types.map(typeId => typeMap[typeId]);
+        weaknessesNames = this.pokemon.faiblesses.map(typeId => typeMap[typeId]);
+        resistancesNames = this.pokemon.résistances.map(typeId => typeMap[typeId]);
+        noteStars = generateStars(this.pokemon.note);
         
-        // Conversion des id de types en noms de types pour les faiblesses du Pokémon
-        const weaknessesNames = pokemon.faiblesses.map(typeId => typeMap[typeId]);
-        
-        // Conversion des id de types en noms de types pour les résistances du Pokémon
-        const resistancesNames = pokemon.résistances.map(typeId => typeMap[typeId]);
-
         let view = /*html*/`
             <section class="section">
-                <h1> Numéro dans le pokédex : ${pokemon.id}</h1>
-                <h2> Nom : ${pokemon.nom} </h2>
-                <p> Description : ${pokemon.description} </p>
+                <h1> Numéro dans le pokédex : ${this.pokemon.id}</h1>
+                <h2> Nom : ${this.pokemon.nom} </h2>
+                <p> Description : ${this.pokemon.description} </p>
                 <p> Types : ${typeNames.join(', ')} </p>
-                <p> Taille : ${pokemon.taille} </p>
-                <p> Poids : ${pokemon.poids} </p>
-                <p> Taux de capture : ${pokemon.taux_capture} </p>
+                <p> Taille : ${this.pokemon.taille} </p>
+                <p> Poids : ${this.pokemon.poids} </p>
+                <p> Taux de capture : ${this.pokemon.taux_capture} </p>
                 <p> Faiblesses : ${weaknessesNames.join(', ')} </p>
                 <p> Résistances : ${resistancesNames.join(', ')} </p>
-                <p> Capacités spéciales : ${pokemon.capacités_spéciales.join(', ')} </p>
-                <p> Localisation : ${pokemon.localisation.join(', ')} </p>
-                <p> Cri : ${pokemon.cri} </p>
+                <p> Capacités spéciales : ${this.pokemon.capacités_spéciales.join(', ')} </p>
+                <p> Localisation : ${this.pokemon.localisation.join(', ')} </p>
+                <p> Cri : ${this.pokemon.cri} </p>
+                <div id="note">
+                    ${noteStars}
+                </div>
             </section>
             <button id="toggleFavoris">${buttonText}</button>
             <p><a href="/">Retour à l'accueil</a></p>
             <p><a href="#/pokemons/page/1">Retour à tous les pokémons</a></p>
         `;
 
+    setTimeout(() => {
+        this.handleStarClick();
+    }, 0);
+
+    return view;
+    }
+
+    handleStarClick() {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                const value = index + 1;
+                PokemonProvider.changeRating(this.pokemon.id, value);
+                location.reload();
+            });
+        });
         return view;
     }
 
