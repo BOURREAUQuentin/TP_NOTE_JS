@@ -96,7 +96,9 @@ export default class PokemonProvider {
             return json;
         } catch (err) {
             console.log('Error updating rating', err);
-          
+        }
+    }
+    
     static filtre = async (idType) => {
         try {
             const allPokemons = await this.fetchPokemons();

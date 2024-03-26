@@ -25,19 +25,11 @@ export default class PokemonShow {
             typeMap[type.id] = type.nomType;
         });
 
-        const typeNames = this.pokemon.types.map(typeId => typeMap[typeId]);
-        const weaknessesNames = this.pokemon.faiblesses.map(typeId => typeMap[typeId]);
-        const resistancesNames = this.pokemon.résistances.map(typeId => typeMap[typeId]);
+        typeNames = this.pokemon.types.map(typeId => typeMap[typeId]);
+        weaknessesNames = this.pokemon.faiblesses.map(typeId => typeMap[typeId]);
+        resistancesNames = this.pokemon.résistances.map(typeId => typeMap[typeId]);
+        noteStars = generateStars(this.pokemon.note);
         
-        const noteStars = generateStars(this.pokemon.note); // Utiliser la note de l'objet plutôt que this.pokemon.note
-        // Conversion des id de types en noms de types pour les types du Pokémon
-        const typeNames = pokemon.types.map(typeId => typeMap[typeId]);
-        
-        // Conversion des id de types en noms de types pour les faiblesses du Pokémon
-        const weaknessesNames = pokemon.faiblesses.map(typeId => typeMap[typeId]);
-        
-        // Conversion des id de types en noms de types pour les résistances du Pokémon
-        const resistancesNames = pokemon.résistances.map(typeId => typeMap[typeId]);
         let view = /*html*/`
             <section class="section">
                 <h1> Numéro dans le pokédex : ${this.pokemon.id}</h1>
