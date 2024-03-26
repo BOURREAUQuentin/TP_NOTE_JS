@@ -1,3 +1,4 @@
+/* partie d'un pokémon dans une liste de pokémons */
 .row{
     margin-top: 20px;
     margin-bottom: 30px;
@@ -5,14 +6,18 @@
 
 .card {
     width: 25rem;
-    height: 25rem;
+    height: 22rem;
 }
 
 .card img{
     margin-top: 10px;
-    width: 40%;
-    height: auto;
+    width: 150px;
+    height: 150px;
     align-self: center;
+}
+
+.d-flex{
+    margin-top: 20px;
 }
 
 

@@ -44,7 +44,7 @@ export default class PokemonAll {
                             <img src="${pokemon.image}" class="card-img-top" alt="${pokemon.nom}">
                             <div class="card-body">
                                 <h3>${pokemon.nom}</h3>
-                                <p class="card-text">${pokemon.description ? pokemon.description.slice(0,100) : ''}...</p>
+                                <p class="card-text">${pokemon.description ? pokemon.description.slice(0,120) : ''}...</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i> Voir ${pokemon.nom}</a>

@@ -1,421 +1,647 @@
 {
-    "pokemons": [
-        {
-            "id": "1",
-            "nom": "Bulbizarre",
-            "types": ["2", "1"],
-            "stats_base": {
-              "PV": 45,
-              "Attaque": 49,
-              "Défense": 49,
-              "Vitesse": 45
-            },
-            "description": "Bulbizarre peut être vu en train de faire la sieste sous un soleil éclatant. Il a une graine sur le dos. En absorbant les rayons du soleil, la graine devient de plus en plus grande.",
-            "evolution": {
-              "pré-évolution": null,
-              "évolution": "Herbizarre"
-            },
-            "taux_capture": 45,
-            "taille": "0.7 m",
-            "poids": "6.9 kg",
-            "faiblesses": ["5", "6"],
-            "résistances": ["2", "1"],
-            "capacités_spéciales": ["Engrais"],
-            "localisation": ["Forêt de Jade", "Cité Azur"],
-            "cri": "Bulbizarre!",
-            "image": "../../../images/bulbizarre.png"
-        },
-        {
-            "id": "4",
-            "nom": "Salameche",
-            "types": ["8"],
-            "stats_base": {
-              "PV": 39,
-              "Attaque": 52,
-              "Défense": 43,
-              "Vitesse": 65
-            },
-            "description": "Salameche dispose de flammes sur la queue qui indiquent son humeur. Plus elles sont intenses, plus ce Pokémon est agressif.",
-            "evolution": {
-              "pré-évolution": null,
-              "évolution": "Reptincel"
-            },
-            "taux_capture": 45,
-            "taille": "0.6 m",
-            "poids": "8.5 kg",
-            "faiblesses": ["2", "6"],
-            "résistances": ["3", "5", "15"],
-            "capacités_spéciales": ["Brasier"],
-            "localisation": ["Forêt de Jade", "Mont Selenite"],
-            "cri": "Salameche!",
-            "image": "../../../images/salameche.png"
-        },
-        {
-        "id": "6",
-        "nom": "Dracaufeu",
-        "types": ["2", "5"],
-        "stats_base": {
-            "PV": 78,
-            "Attaque": 84,
-            "Défense": 78,
-            "Vitesse": 100
-        },
-        "description": "Dracaufeu est capable de voler à des altitudes extrêmement élevées. Il souffle de puissantes flammes chaudes qui réduisent tout en cendres.",
-        "evolution": {
-            "pré-évolution": "Reptincel",
-            "évolution": null
-        },
-        "taux_capture": 5,
-        "taille": "1.7 m",
-        "poids": "90.5 kg",
-        "faiblesses": ["2", "6"],
-        "résistances": ["3", "5", "15"],
-        "capacités_spéciales": ["Brasier"],
-        "localisation": ["Mont Selenite", "Mont Argenté"],
-        "cri": "Dracaufeu!",
-        "image": "../../../images/dracaufeu.png"
-        },
-        {
-            "id": "7",
-            "nom": "Carapuce",
-            "types": ["9"],
-            "stats_base": {
-              "PV": 44,
-              "Attaque": 48,
-              "Défense": 65,
-              "Vitesse": 43
-            },
-            "description": "Carapuce possède une carapace très solide qui peut résister aux attaques les plus puissantes. Il est souvent vu flottant paisiblement à la surface de l'eau.",
-            "evolution": {
-              "pré-évolution": null,
-              "évolution": "Carabaffe"
-            },
-            "taux_capture": 45,
-            "taille": "0.5 m",
-            "poids": "9.0 kg",
-            "faiblesses": ["8", "2", "15"],
-            "résistances": ["9", "12"],
-            "capacités_spéciales": ["Torrent"],
-            "localisation": ["Lac Colère", "Mer Céleste"],
-            "cri": "Carapuce!",
-            "image": "../../../images/carapuce.png"
-        },
-        {
-            "id": "23",
-            "nom": "Abo",
-            "types": ["1"],
-            "stats_base": {
-              "PV": 35,
-              "Attaque": 60,
-              "Défense": 44,
-              "Vitesse": 55
-            },
-            "description": "Abo est un Pokémon serpent venimeux. Il est connu pour sa capacité à se faufiler rapidement dans les endroits les plus étroits.",
-            "evolution": {
-              "pré-évolution": null,
-              "évolution": "Arbok"
-            },
-            "taux_capture": 255,
-            "taille": "2.0 m",
-            "poids": "6.9 kg",
-            "faiblesses": ["3", "4", "15"],
-            "résistances": ["1", "12"],
-            "capacités_spéciales": ["Intimidation"],
-            "localisation": ["Caverne Oubliée", "Marais Mystique"],
-            "cri": "Abo!",
-            "image": "../../../images/abo.png"
-        },
-        {
-            "id": "25",
-            "nom": "Pikachu",
-            "types": ["3"],
-            "stats_base": {
-                "PV": 35,
-                "Attaque": 55,
-                "Défense": 40,
-                "Vitesse": 90
-            },
-            "description": "Pikachu est un Pokémon souris connu pour ses joues électriques et sa queue en forme d'éclair.",
-            "evolution": {
-                "pré-évolution": "Pichu",
-                "évolution": "Raichu"
-            },
-            "taux_capture": 190,
-            "taille": "0.4 m",
-            "poids": "6.0 kg",
-            "faiblesses": ["6"],
-            "résistances": ["3", "4", "5"],
-            "capacités_spéciales": ["Statik"],
-            "localisation": ["Forêt de Jade", "Mont Selenite"],
-            "cri": "Pika pika!",
-            "image": "../../../images/pikachu.png"
-        },
-        {
-            "id": "33",
-            "nom": "Nidorino",
-            "types": ["1"],
-            "stats_base": {
-              "PV": 61,
-              "Attaque": 72,
-              "Défense": 57,
-              "Vitesse": 65
-            },
-            "description": "Nidorino est un Pokémon poison connu pour sa force brute et sa corne empoisonnée. Il peut être assez agressif lorsqu'il se sent menacé.",
-            "evolution": {
-              "pré-évolution": "Nidoran♂",
-              "évolution": "Nidoking"
-            },
-            "taux_capture": 120,
-            "taille": "0.9 m",
-            "poids": "19.5 kg",
-            "faiblesses": ["3", "4", "12", "17"],
-            "résistances": ["1", "8", "9", "14"],
-            "capacités_spéciales": ["Poison Point"],
-            "localisation": ["Forêt de Jade", "Mont Selenite"],
-            "cri": "Nidorino!",
-            "image": "../../../images/nidorino.png"
-        },
-        {
-            "id": "52",
-            "nom": "Miaouss",
-            "types": ["7"],
-            "stats_base": {
-              "PV": 40,
-              "Attaque": 45,
-              "Défense": 35,
-              "Vitesse": 90
-            },
-            "description": "Miaouss est un Pokémon félin connu pour son amour des pièces de monnaie et sa capacité à utiliser ses griffes acérées en combat.",
-            "evolution": {
-              "pré-évolution": null,
-              "évolution": "Persian"
-            },
-            "taux_capture": 255,
-            "taille": "0.4 m",
-            "poids": "4.2 kg",
-            "faiblesses": ["2"],
-            "résistances": ["7"],
-            "capacités_spéciales": ["Pickup", "Technician", "Unnerve"],
-            "localisation": ["Cité Azur", "Port Azur"],
-            "cri": "Miaouss!",
-            "image": "../../../images/miaouss.png"
-        },
-        {
-            "id": "54",
-            "nom": "Psykokwak",
-            "types": ["9"],
-            "stats_base": {
-                "PV": 50,
-                "Attaque": 52,
-                "Défense": 48,
-                "Vitesse": 55
-            },
-            "description": "Psykokwak est un Pokémon canard timide. Il aime nager paisiblement dans les étangs et les lacs.",
-            "evolution": {
-                "pré-évolution": null,
-                "évolution": "Akwakwak"
-            },
-            "taux_capture": 190,
-            "taille": "0.8 m",
-            "poids": "19.6 kg",
-            "faiblesses": ["8", "2", "15"],
-            "résistances": ["9", "12"],
-            "capacités_spéciales": ["Regard Vif", "Sniper"],
-            "localisation": ["Lac Colère", "Rivière du Repos"],
-            "cri": "Psykokwak!",
-            "image": "../../../images/psykokwak.png"
-        },
-        {
-            "id": "64",
-            "nom": "Kadabra",
-            "types": ["13"],
-            "stats_base": {
-                "PV": 40,
-                "Attaque": 35,
-                "Défense": 30,
-                "Vitesse": 105
-            },
-            "description": "Kadabra possède des pouvoirs psychiques incroyables. Il est capable de fléchir les cuillères avec son esprit et de prédire l'avenir.",
-            "evolution": {
-                "pré-évolution": "Abra",
-                "évolution": "Alakazam"
-            },
-            "taux_capture": 100,
-            "taille": "1.3 m",
-            "poids": "56.5 kg",
-            "faiblesses": ["1", "8", "13"],
-            "résistances": ["3", "4"],
-            "capacités_spéciales": ["Synchronise"],
-            "localisation": ["Caverne Oubliée", "Mont Selenite"],
-            "cri": "Kadabra!",
-            "image": "../../../images/kadabra.png"
-        },
-        {
-            "id": "78",
-            "nom": "Galopa",
-            "types": ["7"],
-            "stats_base": {
-                "PV": 65,
-                "Attaque": 100,
-                "Défense": 70,
-                "Vitesse": 105
-            },
-            "description": "Galopa est un Pokémon noble et majestueux. Il est souvent vu galopant à travers les vastes plaines avec une grâce incomparable.",
-            "evolution": {
-                "pré-évolution": "Ponyta",
-                "évolution": null
-            },
-            "taux_capture": 45,
-            "taille": "1.7 m",
-            "poids": "95.0 kg",
-            "faiblesses": ["2"],
-            "résistances": ["7"],
-            "capacités_spéciales": ["Fuite", "Corps Ardent"],
-            "localisation": ["Plaine Enchantée", "Colline de la Brise"],
-            "cri": "Galopa!",
-            "image": "../../../images/galopa.png"
-        },
-        {
-            "id": "83",
-            "nom": "Canarticho",
-            "types": ["14", "7"],
-            "stats_base": {
-                "PV": 52,
-                "Attaque": 65,
-                "Défense": 55,
-                "Vitesse": 60
-            },
-            "description": "Canarticho est un Pokémon oiseau avec un cou extraordinairement long. Il utilise son cou pour asséner des coups de tête rapides et puissants à ses ennemis.",
-            "evolution": {
-                "pré-évolution": null,
-                "évolution": "Doduo"
-            },
-            "taux_capture": 190,
-            "taille": "1.2 m",
-            "poids": "39.2 kg",
-            "faiblesses": ["5", "12", "16"],
-            "résistances": ["2", "4", "14"],
-            "capacités_spéciales": ["Fuite", "Chanceux"],
-            "localisation": ["Forêt de Jade", "Plaine Enchantée"],
-            "cri": "Canarticho!",
-            "image": "../../../images/canarticho.png"
-        },
-        {
-            "id": "130",
-            "nom": "Léviator",
-            "types": ["9", "5"],
-            "stats_base": {
-                "PV": 95,
-                "Attaque": 125,
-                "Défense": 79,
-                "Vitesse": 81
-            },
-            "description": "Léviator est un puissant prédateur aquatique. Il est capable de sauter de l'eau pour attraper ses proies et de voler sur de longues distances.",
-            "evolution": {
-                "pré-évolution": "Magicarpe",
-                "évolution": null
-            },
-            "taux_capture": 25,
-            "taille": "6.5 m",
-            "poids": "235.0 kg",
-            "faiblesses": ["8", "2", "15"],
-            "résistances": ["9", "12"],
-            "capacités_spéciales": ["Force pure"],
-            "localisation": ["Lac Colère", "Mer Céleste"],
-            "cri": "Léviator!",
-            "image": "../../../images/leviator.png"
-        }
-    ],
-    "types": [
-        {
-            "id": "1",
-            "nomType": "Poison",
-            "listePokemonsType": ["2", "23", "33"]
-        },
-        {
-            "id": "2",
-            "nomType": "Plante",
-            "listePokemonsType": ["6"]
-        },
-        {
-            "id": "3",
-            "nomType": "Électrique",
-            "listePokemonsType": ["1", "25"]
-        },
-        {
-            "id": "4",
-            "nomType": "Acier",
-            "listePokemonsType": []
-        },
-        {
-            "id": "5",
-            "nomType": "Vol",
-            "listePokemonsType": ["6", "130"]
-        }
-        ,{
-            "id": "6",
-            "nomType": "Sol",
-            "listePokemonsType": []
-        },
-        {
-            "id": "7",
-            "nomType": "Normal",
-            "listePokemonsType": ["52", "78", "83"]
-        },
-        {
-            "id": "8",
-            "nomType": "Feu",
-            "listePokemonsType": ["4"]
-        },
-        {
-            "id": "9",
-            "nomType": "Eau",
-            "listePokemonsType": ["9", "54", "130"]
-        },
-        {
-            "id": "10",
-            "nomType": "Plante",
-            "listePokemonsType": []
-        },
-        {
-            "id": "11",
-            "nomType": "Glace",
-            "listePokemonsType": []
-        },
-        {
-            "id": "12",
-            "nomType": "Combat",
-            "listePokemonsType": []
-        },
-        {
-            "id": "13",
-            "nomType": "Psy",
-            "listePokemonsType": ["64"]
-        },
-        {
-            "id": "14",
-            "nomType": "Insecte",
-            "listePokemonsType": ["83"]
-        },
-        {
-            "id": "15",
-            "nomType": "Roche",
-            "listePokemonsType": []
-        },
-        {
-            "id": "16",
-            "nomType": "Spectre",
-            "listePokemonsType": []
-        },
-        {
-            "id": "17",
-            "nomType": "Dragon",
-            "listePokemonsType": []
-        },
-        {
-            "id": "18",
-            "nomType": "Ténèbres",
-            "listePokemonsType": []
-        }
-    ]
-  }
+  "pokemons": [
+    {
+      "id": "1",
+      "nom": "Bulbizarre",
+      "types": [
+        "2",
+        "1"
+      ],
+      "stats_base": {
+        "PV": 45,
+        "Attaque": 49,
+        "Défense": 49,
+        "Vitesse": 45
+      },
+      "description": "Bulbizarre peut être vu en train de faire la sieste sous un soleil éclatant. Il a une graine sur le dos. En absorbant les rayons du soleil, la graine devient de plus en plus grande.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Herbizarre"
+      },
+      "taux_capture": 45,
+      "taille": "0.7 m",
+      "poids": "6.9 kg",
+      "faiblesses": [
+        "5",
+        "6"
+      ],
+      "résistances": [
+        "2",
+        "1"
+      ],
+      "capacités_spéciales": [
+        "Engrais"
+      ],
+      "localisation": [
+        "Forêt de Jade",
+        "Cité Azur"
+      ],
+      "cri": "Bulbizarre!",
+      "image": "../../../images/bulbizarre.png",
+      "note": 4
+    },
+    {
+      "id": "4",
+      "nom": "Salameche",
+      "types": [
+        "8"
+      ],
+      "stats_base": {
+        "PV": 39,
+        "Attaque": 52,
+        "Défense": 43,
+        "Vitesse": 65
+      },
+      "description": "Salameche dispose de flammes sur la queue qui indiquent son humeur. Plus elles sont intenses, plus ce Pokémon est agressif.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Reptincel"
+      },
+      "taux_capture": 45,
+      "taille": "0.6 m",
+      "poids": "8.5 kg",
+      "faiblesses": [
+        "2",
+        "6"
+      ],
+      "résistances": [
+        "3",
+        "5",
+        "15"
+      ],
+      "capacités_spéciales": [
+        "Brasier"
+      ],
+      "localisation": [
+        "Forêt de Jade",
+        "Mont Selenite"
+      ],
+      "cri": "Salameche!",
+      "image": "../../../images/salameche.png",
+      "note": 3
+    },
+    {
+      "id": "6",
+      "nom": "Dracaufeu",
+      "types": [
+        "2",
+        "5"
+      ],
+      "stats_base": {
+        "PV": 78,
+        "Attaque": 84,
+        "Défense": 78,
+        "Vitesse": 100
+      },
+      "description": "Dracaufeu est capable de voler à des altitudes extrêmement élevées. Il souffle de puissantes flammes chaudes qui réduisent tout en cendres.",
+      "evolution": {
+        "pré-évolution": "Reptincel",
+        "évolution": null
+      },
+      "taux_capture": 5,
+      "taille": "1.7 m",
+      "poids": "90.5 kg",
+      "faiblesses": [
+        "2",
+        "6"
+      ],
+      "résistances": [
+        "3",
+        "5",
+        "15"
+      ],
+      "capacités_spéciales": [
+        "Brasier"
+      ],
+      "localisation": [
+        "Mont Selenite",
+        "Mont Argenté"
+      ],
+      "cri": "Dracaufeu!",
+      "image": "../../../images/dracaufeu.png",
+      "note": 0
+    },
+    {
+      "id": "7",
+      "nom": "Carapuce",
+      "types": [
+        "9"
+      ],
+      "stats_base": {
+        "PV": 44,
+        "Attaque": 48,
+        "Défense": 65,
+        "Vitesse": 43
+      },
+      "description": "Carapuce possède une carapace très solide qui peut résister aux attaques les plus puissantes. Il est souvent vu flottant paisiblement à la surface de l'eau.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Carabaffe"
+      },
+      "taux_capture": 45,
+      "taille": "0.5 m",
+      "poids": "9.0 kg",
+      "faiblesses": [
+        "8",
+        "2",
+        "15"
+      ],
+      "résistances": [
+        "9",
+        "12"
+      ],
+      "capacités_spéciales": [
+        "Torrent"
+      ],
+      "localisation": [
+        "Lac Colère",
+        "Mer Céleste"
+      ],
+      "cri": "Carapuce!",
+      "image": "../../../images/carapuce.png",
+      "note": 0
+    },
+    {
+      "id": "23",
+      "nom": "Abo",
+      "types": [
+        "1"
+      ],
+      "stats_base": {
+        "PV": 35,
+        "Attaque": 60,
+        "Défense": 44,
+        "Vitesse": 55
+      },
+      "description": "Abo est un Pokémon serpent venimeux. Il est connu pour sa capacité à se faufiler rapidement dans les endroits les plus étroits.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Arbok"
+      },
+      "taux_capture": 255,
+      "taille": "2.0 m",
+      "poids": "6.9 kg",
+      "faiblesses": [
+        "3",
+        "4",
+        "15"
+      ],
+      "résistances": [
+        "1",
+        "12"
+      ],
+      "capacités_spéciales": [
+        "Intimidation"
+      ],
+      "localisation": [
+        "Caverne Oubliée",
+        "Marais Mystique"
+      ],
+      "cri": "Abo!",
+      "image": "../../../images/abo.png",
+      "note": 4
+    },
+    {
+      "id": "25",
+      "nom": "Pikachu",
+      "types": [
+        "3"
+      ],
+      "stats_base": {
+        "PV": 35,
+        "Attaque": 55,
+        "Défense": 40,
+        "Vitesse": 90
+      },
+      "description": "Pikachu est un Pokémon souris connu pour ses joues électriques et sa queue en forme d'éclair. Pikachu stocke de l'électricité dans ses joues, ce qui lui permet de déclencher des attaques électriques puissantes, telles que Éclair et Tonnerre.",
+      "evolution": {
+        "pré-évolution": "Pichu",
+        "évolution": "Raichu"
+      },
+      "taux_capture": 190,
+      "taille": "0.4 m",
+      "poids": "6.0 kg",
+      "faiblesses": [
+        "6"
+      ],
+      "résistances": [
+        "3",
+        "4",
+        "5"
+      ],
+      "capacités_spéciales": [
+        "Statik"
+      ],
+      "localisation": [
+        "Forêt de Jade",
+        "Mont Selenite"
+      ],
+      "cri": "Pika pika!",
+      "image": "../../../images/pikachu.png",
+      "note": 1
+    },
+    {
+      "id": "33",
+      "nom": "Nidorino",
+      "types": [
+        "1"
+      ],
+      "stats_base": {
+        "PV": 61,
+        "Attaque": 72,
+        "Défense": 57,
+        "Vitesse": 65
+      },
+      "description": "Nidorino est un Pokémon poison connu pour sa force brute et sa corne empoisonnée. Il peut être assez agressif lorsqu'il se sent menacé.",
+      "evolution": {
+        "pré-évolution": "Nidoran♂",
+        "évolution": "Nidoking"
+      },
+      "taux_capture": 120,
+      "taille": "0.9 m",
+      "poids": "19.5 kg",
+      "faiblesses": [
+        "3",
+        "4",
+        "12",
+        "17"
+      ],
+      "résistances": [
+        "1",
+        "8",
+        "9",
+        "14"
+      ],
+      "capacités_spéciales": [
+        "Poison Point"
+      ],
+      "localisation": [
+        "Forêt de Jade",
+        "Mont Selenite"
+      ],
+      "cri": "Nidorino!",
+      "image": "../../../images/nidorino.png",
+      "note": 2
+    },
+    {
+      "id": "52",
+      "nom": "Miaouss",
+      "types": [
+        "7"
+      ],
+      "stats_base": {
+        "PV": 40,
+        "Attaque": 45,
+        "Défense": 35,
+        "Vitesse": 90
+      },
+      "description": "Miaouss est un Pokémon félin connu pour son amour des pièces de monnaie et sa capacité à utiliser ses griffes acérées en combat.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Persian"
+      },
+      "taux_capture": 255,
+      "taille": "0.4 m",
+      "poids": "4.2 kg",
+      "faiblesses": [
+        "2"
+      ],
+      "résistances": [
+        "7"
+      ],
+      "capacités_spéciales": [
+        "Pickup",
+        "Technician",
+        "Unnerve"
+      ],
+      "localisation": [
+        "Cité Azur",
+        "Port Azur"
+      ],
+      "cri": "Miaouss!",
+      "image": "../../../images/miaouss.png",
+      "note": 3
+    },
+    {
+      "id": "54",
+      "nom": "Psykokwak",
+      "types": [
+        "9"
+      ],
+      "stats_base": {
+        "PV": 50,
+        "Attaque": 52,
+        "Défense": 48,
+        "Vitesse": 55
+      },
+      "description": "Psykokwak est connu pour être un Pokémon canard timide, préférant nager paisiblement dans les étangs et les lacs, loin de l'agitation urbaine.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Akwakwak"
+      },
+      "taux_capture": 190,
+      "taille": "0.8 m",
+      "poids": "19.6 kg",
+      "faiblesses": [
+        "8",
+        "2",
+        "15"
+      ],
+      "résistances": [
+        "9",
+        "12"
+      ],
+      "capacités_spéciales": [
+        "Regard Vif",
+        "Sniper"
+      ],
+      "localisation": [
+        "Lac Colère",
+        "Rivière du Repos"
+      ],
+      "cri": "Psykokwak!",
+      "image": "../../../images/psykokwak.png",
+      "note": 5
+    },
+    {
+      "id": "64",
+      "nom": "Kadabra",
+      "types": [
+        "13"
+      ],
+      "stats_base": {
+        "PV": 40,
+        "Attaque": 35,
+        "Défense": 30,
+        "Vitesse": 105
+      },
+      "description": "Kadabra possède des pouvoirs psychiques incroyables. Il est capable de fléchir les cuillères avec son esprit et de prédire l'avenir.",
+      "evolution": {
+        "pré-évolution": "Abra",
+        "évolution": "Alakazam"
+      },
+      "taux_capture": 100,
+      "taille": "1.3 m",
+      "poids": "56.5 kg",
+      "faiblesses": [
+        "1",
+        "8",
+        "13"
+      ],
+      "résistances": [
+        "3",
+        "4"
+      ],
+      "capacités_spéciales": [
+        "Synchronise"
+      ],
+      "localisation": [
+        "Caverne Oubliée",
+        "Mont Selenite"
+      ],
+      "cri": "Kadabra!",
+      "image": "../../../images/kadabra.png",
+      "note": 0
+    },
+    {
+      "id": "78",
+      "nom": "Galopa",
+      "types": [
+        "7"
+      ],
+      "stats_base": {
+        "PV": 65,
+        "Attaque": 100,
+        "Défense": 70,
+        "Vitesse": 105
+      },
+      "description": "Galopa est un Pokémon noble et majestueux. Il est souvent vu galopant à travers les vastes plaines avec une grâce incomparable.",
+      "evolution": {
+        "pré-évolution": "Ponyta",
+        "évolution": null
+      },
+      "taux_capture": 45,
+      "taille": "1.7 m",
+      "poids": "95.0 kg",
+      "faiblesses": [
+        "2"
+      ],
+      "résistances": [
+        "7"
+      ],
+      "capacités_spéciales": [
+        "Fuite",
+        "Corps Ardent"
+      ],
+      "localisation": [
+        "Plaine Enchantée",
+        "Colline de la Brise"
+      ],
+      "cri": "Galopa!",
+      "image": "../../../images/galopa.png",
+      "note": 3
+    },
+    {
+      "id": "83",
+      "nom": "Canarticho",
+      "types": [
+        "14",
+        "7"
+      ],
+      "stats_base": {
+        "PV": 52,
+        "Attaque": 65,
+        "Défense": 55,
+        "Vitesse": 60
+      },
+      "description": "Canarticho est un Pokémon oiseau avec un cou extraordinairement long. Il utilise son cou pour asséner des coups de tête rapides et puissants à ses ennemis.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Doduo"
+      },
+      "taux_capture": 190,
+      "taille": "1.2 m",
+      "poids": "39.2 kg",
+      "faiblesses": [
+        "5",
+        "12",
+        "16"
+      ],
+      "résistances": [
+        "2",
+        "4",
+        "14"
+      ],
+      "capacités_spéciales": [
+        "Fuite",
+        "Chanceux"
+      ],
+      "localisation": [
+        "Forêt de Jade",
+        "Plaine Enchantée"
+      ],
+      "cri": "Canarticho!",
+      "image": "../../../images/canarticho.png",
+      "note": 1
+    },
+    {
+      "id": "130",
+      "nom": "Léviator",
+      "types": [
+        "9",
+        "5"
+      ],
+      "stats_base": {
+        "PV": 95,
+        "Attaque": 125,
+        "Défense": 79,
+        "Vitesse": 81
+      },
+      "description": "Léviator est un puissant prédateur aquatique. Il est capable de sauter de l'eau pour attraper ses proies et de voler sur de longues distances.",
+      "evolution": {
+        "pré-évolution": "Magicarpe",
+        "évolution": null
+      },
+      "taux_capture": 25,
+      "taille": "6.5 m",
+      "poids": "235.0 kg",
+      "faiblesses": [
+        "8",
+        "2",
+        "15"
+      ],
+      "résistances": [
+        "9",
+        "12"
+      ],
+      "capacités_spéciales": [
+        "Force pure"
+      ],
+      "localisation": [
+        "Lac Colère",
+        "Mer Céleste"
+      ],
+      "cri": "Léviator!",
+      "image": "../../../images/leviator.png",
+      "note": 3
+    }
+  ],
+  "types": [
+    {
+      "id": "1",
+      "nomType": "Poison",
+      "listePokemonsType": [
+        "2",
+        "23",
+        "33"
+      ]
+    },
+    {
+      "id": "2",
+      "nomType": "Plante",
+      "listePokemonsType": [
+        "6"
+      ]
+    },
+    {
+      "id": "3",
+      "nomType": "Électrique",
+      "listePokemonsType": [
+        "1",
+        "25"
+      ]
+    },
+    {
+      "id": "4",
+      "nomType": "Acier",
+      "listePokemonsType": []
+    },
+    {
+      "id": "5",
+      "nomType": "Vol",
+      "listePokemonsType": [
+        "6",
+        "130"
+      ]
+    },
+    {
+      "id": "6",
+      "nomType": "Sol",
+      "listePokemonsType": []
+    },
+    {
+      "id": "7",
+      "nomType": "Normal",
+      "listePokemonsType": [
+        "52",
+        "78",
+        "83"
+      ]
+    },
+    {
+      "id": "8",
+      "nomType": "Feu",
+      "listePokemonsType": [
+        "4"
+      ]
+    },
+    {
+      "id": "9",
+      "nomType": "Eau",
+      "listePokemonsType": [
+        "9",
+        "54",
+        "130"
+      ]
+    },
+    {
+      "id": "10",
+      "nomType": "Plante",
+      "listePokemonsType": []
+    },
+    {
+      "id": "11",
+      "nomType": "Glace",
+      "listePokemonsType": []
+    },
+    {
+      "id": "12",
+      "nomType": "Combat",
+      "listePokemonsType": []
+    },
+    {
+      "id": "13",
+      "nomType": "Psy",
+      "listePokemonsType": [
+        "64"
+      ]
+    },
+    {
+      "id": "14",
+      "nomType": "Insecte",
+      "listePokemonsType": [
+        "83"
+      ]
+    },
+    {
+      "id": "15",
+      "nomType": "Roche",
+      "listePokemonsType": []
+    },
+    {
+      "id": "16",
+      "nomType": "Spectre",
+      "listePokemonsType": []
+    },
+    {
+      "id": "17",
+      "nomType": "Dragon",
+      "listePokemonsType": []
+    },
+    {
+      "id": "18",
+      "nomType": "Ténèbres",
+      "listePokemonsType": []
+    }
+  ]
+}

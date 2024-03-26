@@ -99,4 +99,30 @@ export default class PokemonProvider {
             return [];
         }
     }
+
+    static changeRating = async (id, rating) => {
+        const options = {
+            method: 'PATCH', // maj partielle de la ressource
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ note: rating })
+        };
+    
+        console.log(JSON.stringify({ note: rating }));
+        console.log(options);
+    
+        try {
+            const response = await fetch(`${ENDPOINT_POKEMONS}/${id}`, options);
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} - ${response.statusText}`);
+            }
+            const json = await response.json();
+            return json;
+        } catch (err) {
+            console.log('Error updating rating', err);
+            throw err; // Propager l'erreur pour qu'elle soit gérée ailleurs si nécessaire
+        }
+    }
+    
 }

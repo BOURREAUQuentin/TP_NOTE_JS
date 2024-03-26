@@ -1,15 +1,20 @@
 import Utils from '../../services/Utils.js';
+import { generateStars } from '../../services/Utils.js';
 import PokemonProvider from '../../services/PokemonProvider.js';
 
 export default class PokemonShow {
+    constructor() {
+        this.pokemon = null;
+    }
+
     async render() {
         let request = Utils.parseRequestURL();
-        let pokemon = await PokemonProvider.getPokemon(request.id);
+        this.pokemon = await PokemonProvider.getPokemon(request.id);
         let typesData = await PokemonProvider.fetchTypes();
 
         // Vérifier si le Pokémon est déjà en favoris
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-        let isFavorite = favorites.includes(pokemon.id);
+        let isFavorite = favorites.includes(this.pokemon.id);
 
         // Afficher le texte du bouton en fonction de l'état des favoris
         let buttonText = isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris';
@@ -20,34 +25,33 @@ export default class PokemonShow {
             typeMap[type.id] = type.nomType;
         });
 
-        // Conversion des id de types en noms de types pour les types du Pokémon
-        const typeNames = pokemon.types.map(typeId => typeMap[typeId]);
-        
-        // Conversion des id de types en noms de types pour les faiblesses du Pokémon
-        const weaknessesNames = pokemon.faiblesses.map(typeId => typeMap[typeId]);
-        
-        // Conversion des id de types en noms de types pour les résistances du Pokémon
-        const resistancesNames = pokemon.résistances.map(typeId => typeMap[typeId]);
+        const typeNames = this.pokemon.types.map(typeId => typeMap[typeId]);
+        const weaknessesNames = this.pokemon.faiblesses.map(typeId => typeMap[typeId]);
+        const resistancesNames = this.pokemon.résistances.map(typeId => typeMap[typeId]);
+        const noteStars = generateStars(this.pokemon.note);
 
         let view = /*html*/`
             <section class="section">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="${pokemon.image}" class="card-img-top" alt="${pokemon.nom}">
+                        <img src="${this.pokemon.image}" class="card-img-top" alt="${this.pokemon.nom}">
                     </div>
                     <div class="col-md-6">
-                        <h1> Numéro dans le pokédex : ${pokemon.id}</h1>
-                        <h2> Nom : ${pokemon.nom} </h2>
-                        <p> Description : ${pokemon.description} </p>
+                        <h1> Numéro dans le pokédex : ${this.pokemon.id}</h1>
+                        <h2> Nom : ${this.pokemon.nom} </h2>
+                        <p> Description : ${this.pokemon.description} </p>
                         <p> Types : ${typeNames.join(', ')} </p>
-                        <p> Taille : ${pokemon.taille} </p>
-                        <p> Poids : ${pokemon.poids} </p>
-                        <p> Taux de capture : ${pokemon.taux_capture} </p>
+                        <p> Taille : ${this.pokemon.taille} </p>
+                        <p> Poids : ${this.pokemon.poids} </p>
+                        <p> Taux de capture : ${this.pokemon.taux_capture} </p>
                         <p> Faiblesses : ${weaknessesNames.join(', ')} </p>
                         <p> Résistances : ${resistancesNames.join(', ')} </p>
-                        <p> Capacités spéciales : ${pokemon.capacités_spéciales.join(', ')} </p>
-                        <p> Localisation : ${pokemon.localisation.join(', ')} </p>
-                        <p> Cri : ${pokemon.cri} </p>
+                        <p> Capacités spéciales : ${this.pokemon.capacités_spéciales.join(', ')} </p>
+                        <p> Localisation : ${this.pokemon.localisation.join(', ')} </p>
+                        <p> Cri : ${this.pokemon.cri} </p>
+                        <div id="note">
+                            ${noteStars}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -55,7 +59,22 @@ export default class PokemonShow {
             <a href="/" class="btn btn-sm btn-outline-secondary"><i class="fas fa-home"></i> Accueil</a>
             <a href="#/pokemons/page/1" class="btn btn-sm btn-outline-secondary"><i class="fas fa-paw"></i> Tous les pokémons</a>
         `;
+        setTimeout(() => {
+            this.handleStarClick(view);
+        }, 0);
 
+        return view;
+    }
+
+    handleStarClick(view) {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                const value = index + 1;
+                PokemonProvider.changeRating(this.pokemon.id, value);
+                location.reload();
+            });
+        });
         return view;
     }
 
@@ -71,7 +90,8 @@ export default class PokemonShow {
         if (index !== -1) {
             // le pokémon est déjà en favori, donc le supprimer
             favorites.splice(index, 1);
-        } else {
+        }
+        else {
             // le pokémon n'est pas en favori, donc l'ajouter
             favorites.push(pokemonId);
         }
