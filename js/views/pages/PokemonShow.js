@@ -31,6 +31,7 @@ export default class PokemonShow {
 
         let view = /*html*/`
             <section class="section">
+                <img src="${pokemon.image}" class="card-img-top" alt="${pokemon.nom}">
                 <h1> Numéro dans le pokédex : ${pokemon.id}</h1>
                 <h2> Nom : ${pokemon.nom} </h2>
                 <p> Description : ${pokemon.description} </p>
