@@ -2,11 +2,11 @@ export default class About {
     async render () {
         return /*html*/`
             <section class="section">
-                <h1>Information</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, optio? Culpa ipsum facilis accusamus et iure cupiditate quae minima eum veritatis! Ipsum, hic nemo! Suscipit eligendi magnam atque fugit error.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, optio? Culpa ipsum facilis accusamus et iure cupiditate quae minima eum veritatis! Ipsum, hic nemo! Suscipit eligendi magnam atque fugit error.</p>
+                <h1>Notre site</h1>
+                <p>Poképédia est une encyclopédie en ligne dédiée à l'univers Pokémon. Elle offre une vaste collection d'informations sur les créatures, les personnages, les jeux, les séries télévisées, les films et tout ce qui touche de près ou de loin à cet univers captivant. Créée par des fans passionnés, Poképédia vise à fournir des données détaillées, des analyses approfondies et des actualités à jour sur tout ce qui concerne Pokémon.</p>
+                <p>Les utilisateurs de Poképédia peuvent explorer des articles informatifs et détaillés sur chaque pokémon.  Que ce soit pour les joueurs débutants cherchant des conseils ou les vétérans souhaitant partager leur expertise, Poképédia est un lieu de rencontre incontournable pour tous les fans de Pokémon.</p>
             </section>
-            <p><a href="/">back to home</a></p>
+            <p><a href="/">Retour à l'accueil</a></p>
         `
     }
 }
