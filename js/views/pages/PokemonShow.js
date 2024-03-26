@@ -31,23 +31,29 @@ export default class PokemonShow {
 
         let view = /*html*/`
             <section class="section">
-                <img src="${pokemon.image}" class="card-img-top" alt="${pokemon.nom}">
-                <h1> Numéro dans le pokédex : ${pokemon.id}</h1>
-                <h2> Nom : ${pokemon.nom} </h2>
-                <p> Description : ${pokemon.description} </p>
-                <p> Types : ${typeNames.join(', ')} </p>
-                <p> Taille : ${pokemon.taille} </p>
-                <p> Poids : ${pokemon.poids} </p>
-                <p> Taux de capture : ${pokemon.taux_capture} </p>
-                <p> Faiblesses : ${weaknessesNames.join(', ')} </p>
-                <p> Résistances : ${resistancesNames.join(', ')} </p>
-                <p> Capacités spéciales : ${pokemon.capacités_spéciales.join(', ')} </p>
-                <p> Localisation : ${pokemon.localisation.join(', ')} </p>
-                <p> Cri : ${pokemon.cri} </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="${pokemon.image}" class="card-img-top" alt="${pokemon.nom}">
+                    </div>
+                    <div class="col-md-6">
+                        <h1> Numéro dans le pokédex : ${pokemon.id}</h1>
+                        <h2> Nom : ${pokemon.nom} </h2>
+                        <p> Description : ${pokemon.description} </p>
+                        <p> Types : ${typeNames.join(', ')} </p>
+                        <p> Taille : ${pokemon.taille} </p>
+                        <p> Poids : ${pokemon.poids} </p>
+                        <p> Taux de capture : ${pokemon.taux_capture} </p>
+                        <p> Faiblesses : ${weaknessesNames.join(', ')} </p>
+                        <p> Résistances : ${resistancesNames.join(', ')} </p>
+                        <p> Capacités spéciales : ${pokemon.capacités_spéciales.join(', ')} </p>
+                        <p> Localisation : ${pokemon.localisation.join(', ')} </p>
+                        <p> Cri : ${pokemon.cri} </p>
+                    </div>
+                </div>
             </section>
-            <button id="toggleFavoris">${buttonText}</button>
-            <p><a href="/">Retour à l'accueil</a></p>
-            <p><a href="#/pokemons/page/1">Retour à tous les pokémons</a></p>
+            <a id="toggleFavoris" class="btn btn-sm btn-outline-secondary">${buttonText}</a>
+            <a href="/" class="btn btn-sm btn-outline-secondary"><i class="fas fa-home"></i> Accueil</a>
+            <a href="#/pokemons/page/1" class="btn btn-sm btn-outline-secondary"><i class="fas fa-paw"></i> Tous les pokémons</a>
         `;
 
         return view;

@@ -11,7 +11,7 @@ export default class Home {
             <div class="card shadow-sm">
                 <img src="${pokemon.image}" class="card-img-top" alt="${pokemon.nom}">
                 <div class="card-body">
-                    <p class="card-text">${pokemon.description ? pokemon.description.slice(0, 100) : ''}</p>
+                    <p class="card-text">${pokemon.description ? pokemon.description.slice(0, 100) : ''}...</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                         <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary">+ détails sur ${pokemon.nom}</a>
