@@ -1,4 +1,5 @@
 import Utils from '../../services/Utils.js';
+import { generateStars } from '../../services/Utils.js';
 import PokemonProvider from '../../services/PokemonProvider.js';
 
 export default class PokemonShow {
@@ -20,29 +21,7 @@ export default class PokemonShow {
         const weaknessesNames = this.pokemon.faiblesses.map(typeId => typeMap[typeId]);
         const resistancesNames = this.pokemon.résistances.map(typeId => typeMap[typeId]);
         
-        function generateStars(rating) {
-            const totalStars = 5;
-            const fullStars = Math.floor(rating);
-            const halfStar = rating % 1 !== 0;
-            const emptyStars = totalStars - fullStars - (halfStar ? 1 : 0);
-        
-            let starsHTML = '';
-            
-            for (let i = 0; i < fullStars; i++) {
-                starsHTML += '<i class="fas fa-star"></i>';
-            }
-            
-            if (halfStar) {
-                starsHTML += '<i class="fas fa-star-half-alt"></i>';
-            }
-            
-            for (let i = 0; i < emptyStars; i++) {
-                starsHTML += '<i class="far fa-star"></i>';
-            }
-            
-            return starsHTML;
-        }
-        const noteStars = generateStars(this.pokemon.note);
+        const noteStars = generateStars(this.pokemon.note); // Utiliser la note de l'objet plutôt que this.pokemon.note
 
         let view = /*html*/`
             <section class="section">
@@ -65,7 +44,22 @@ export default class PokemonShow {
             <p><a href="/">Retour à l'accueil</a></p>
             <p><a href="#/pokemons">Retour à tous les pokémons</a></p>
         `;
-        
-        return view;
+
+    setTimeout(() => {
+        this.handleStarClick();
+    }, 0);
+
+    return view;
+    }
+
+    handleStarClick() {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                const value = index + 1;
+                PokemonProvider.changeRating(this.pokemon.id, value);
+                location.reload();
+            });
+        });
     }
 }
