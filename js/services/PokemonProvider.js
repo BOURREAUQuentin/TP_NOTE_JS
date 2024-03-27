@@ -2,21 +2,29 @@ import { ENDPOINT_POKEMONS, ENDPOINT_TYPES } from '../config.js'
 
 export default class PokemonProvider {
 
-    static fetchPokemons = async () => {
+    static fetchPokemons = async (limit = 0) => {
+        let url = ENDPOINT_POKEMONS;
+    
+        // si une limite est spécifiée, on l'ajoute à l'URL
+        if (limit !== 0) {
+            url += `?_limit=${limit}`;
+        }
+    
         const options = {
-           method: 'GET',
-           headers: {
-               'Content-Type': 'application/json'
-           }
-       };
-       try {
-           const response = await fetch(`${ENDPOINT_POKEMONS}`, options)
-           const json = await response.json();
-           return json
-       } catch (err) {
-           console.log('Error getting documents', err)
-       }
-    }
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+    
+        try {
+            const response = await fetch(url, options);
+            const json = await response.json();
+            return json;
+        } catch (err) {
+            console.log('Error getting documents', err);
+        }
+    }    
 
     static getPokemon = async (id) => {
         const options = {
