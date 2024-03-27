@@ -40,6 +40,13 @@ export default class PokemonShow {
                         <h1> Numéro dans le pokédex : ${this.pokemon.id}</h1>
                         <h2> Nom : ${this.pokemon.nom} </h2>
                         <p> Description : ${this.pokemon.description} </p>
+                        <h3>Statistiques de base</h3>
+                        <div class="stats">
+                            <div>PV : ${this.pokemon.stats_base.PV} <i class="fas fa-heart"></i></div>
+                            <div>Attaque : ${this.pokemon.stats_base.Attaque} <i class="fas fa-fist-raised"></i></div>
+                            <div>Défense : ${this.pokemon.stats_base.Défense} <i class="fas fa-shield-alt"></i></div>
+                            <div>Vitesse : ${this.pokemon.stats_base.Vitesse} <i class="fas fa-running"></i></div>
+                        </div>
                         <p> Types : ${typeNames.join(', ')} </p>
                         <p> Taille : ${this.pokemon.taille} </p>
                         <p> Poids : ${this.pokemon.poids} </p>
