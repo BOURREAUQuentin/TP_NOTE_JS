@@ -37,6 +37,7 @@
         "Cité Azur"
       ],
       "cri": "Bulbizarre!",
+      "image": "../../../images/bulbizarre.png",
       "note": 4
     },
     {
@@ -76,6 +77,7 @@
         "Mont Selenite"
       ],
       "cri": "Salameche!",
+      "image": "../../../images/salameche.png",
       "note": 3
     },
     {
@@ -116,7 +118,8 @@
         "Mont Argenté"
       ],
       "cri": "Dracaufeu!",
-      "note": 4
+      "image": "../../../images/dracaufeu.png",
+      "note": 0
     },
     {
       "id": "7",
@@ -155,6 +158,7 @@
         "Mer Céleste"
       ],
       "cri": "Carapuce!",
+      "image": "../../../images/carapuce.png",
       "note": 2
     },
     {
@@ -194,6 +198,7 @@
         "Marais Mystique"
       ],
       "cri": "Abo!",
+      "image": "../../../images/abo.png",
       "note": 4
     },
     {
@@ -208,7 +213,7 @@
         "Défense": 40,
         "Vitesse": 90
       },
-      "description": "Pikachu est un Pokémon souris connu pour ses joues électriques et sa queue en forme d'éclair.",
+      "description": "Pikachu est un Pokémon souris connu pour ses joues électriques et sa queue en forme d'éclair. Pikachu stocke de l'électricité dans ses joues, ce qui lui permet de déclencher des attaques électriques puissantes, telles que Éclair et Tonnerre.",
       "evolution": {
         "pré-évolution": "Pichu",
         "évolution": "Raichu"
@@ -232,7 +237,8 @@
         "Mont Selenite"
       ],
       "cri": "Pika pika!",
-      "note": 5
+      "image": "../../../images/pikachu.png",
+      "note": 1
     },
     {
       "id": "33",
@@ -274,6 +280,7 @@
         "Mont Selenite"
       ],
       "cri": "Nidorino!",
+      "image": "../../../images/nidorino.png",
       "note": 2
     },
     {
@@ -312,7 +319,8 @@
         "Port Azur"
       ],
       "cri": "Miaouss!",
-      "note": 1
+      "image": "../../../images/miaouss.png",
+      "note": 3
     },
     {
       "id": "54",
@@ -326,7 +334,7 @@
         "Défense": 48,
         "Vitesse": 55
       },
-      "description": "Psykokwak est un Pokémon canard timide. Il aime nager paisiblement dans les étangs et les lacs.",
+      "description": "Psykokwak est connu pour être un Pokémon canard timide, préférant nager paisiblement dans les étangs et les lacs, loin de l'agitation urbaine.",
       "evolution": {
         "pré-évolution": null,
         "évolution": "Akwakwak"
@@ -352,7 +360,8 @@
         "Rivière du Repos"
       ],
       "cri": "Psykokwak!",
-      "note": 6
+      "image": "../../../images/psykokwak.png",
+      "note": 5
     },
     {
       "id": "64",
@@ -391,7 +400,8 @@
         "Mont Selenite"
       ],
       "cri": "Kadabra!",
-      "note": 3
+      "image": "../../../images/kadabra.png",
+      "note": 0
     },
     {
       "id": "78",
@@ -428,7 +438,8 @@
         "Colline de la Brise"
       ],
       "cri": "Galopa!",
-      "note": 0
+      "image": "../../../images/galopa.png",
+      "note": 3
     },
     {
       "id": "83",
@@ -470,7 +481,8 @@
         "Plaine Enchantée"
       ],
       "cri": "Canarticho!",
-      "note": 0
+      "image": "../../../images/canarticho.png",
+      "note": 1
     },
     {
       "id": "130",
@@ -510,7 +522,8 @@
         "Mer Céleste"
       ],
       "cri": "Léviator!",
-      "note": 0
+      "image": "../../../images/leviator.png",
+      "note": 3
     }
   ],
   "types": [
@@ -518,7 +531,9 @@
       "id": "1",
       "nomType": "Poison",
       "listePokemonsType": [
-        "2"
+        "2",
+        "23",
+        "33"
       ]
     },
     {
@@ -533,7 +548,8 @@
       "id": "3",
       "nomType": "Électrique",
       "listePokemonsType": [
-        "1"
+        "1",
+        "25"
       ]
     },
     {
@@ -557,17 +573,25 @@
     {
       "id": "7",
       "nomType": "Normal",
-      "listePokemonsType": []
+      "listePokemonsType": [
+        "52",
+        "78",
+        "83"
+      ]
     },
     {
       "id": "8",
       "nomType": "Feu",
-      "listePokemonsType": []
+      "listePokemonsType": [
+        "4"
+      ]
     },
     {
       "id": "9",
       "nomType": "Eau",
       "listePokemonsType": [
+        "9",
+        "54",
         "130"
       ]
     },
@@ -589,12 +613,16 @@
     {
       "id": "13",
       "nomType": "Psy",
-      "listePokemonsType": []
+      "listePokemonsType": [
+        "64"
+      ]
     },
     {
       "id": "14",
       "nomType": "Insecte",
-      "listePokemonsType": []
+      "listePokemonsType": [
+        "83"
+      ]
     },
     {
       "id": "15",

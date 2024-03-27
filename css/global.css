@@ -1,0 +1,67 @@
+/* partie d'un pokémon dans une liste de pokémons */
+.row{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    width: 25rem;
+    height: 22rem;
+}
+
+.card img{
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    align-self: center;
+}
+
+.d-flex{
+    margin-top: 20px;
+}
+
+
+
+
+/* page d'un pokémon en détail */
+.stats{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.stats *{
+    margin-right: 10px;
+}
+
+.section img {
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.section h1,
+.section h2,
+.section p {
+    width: 100%;
+}
+
+.section h1, h2{
+    margin-bottom: 30px;
+}
+
+@media (max-width: 576px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .section h1,
+    .section h2,
+    .section p {
+        width: 100%;
+    }
+}

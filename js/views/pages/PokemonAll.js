@@ -41,11 +41,13 @@ export default class PokemonAll {
                     /*html*/`
                     <div class="col">
                         <div class="card shadow-sm">
+                            <img src="${pokemon.image}" class="card-img-top" alt="${pokemon.nom}">
                             <div class="card-body">
-                                <p class="card-text">${pokemon.description ? pokemon.description.slice(0,100) : ''}</p>
+                                <h3>${pokemon.nom}</h3>
+                                <p class="card-text">${pokemon.description ? pokemon.description.slice(0,120) : ''}...</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary">Voir ${pokemon.nom}</a>
+                                        <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i> Voir ${pokemon.nom}</a>
                                     </div>
                                     <small class="text-body-secondary">Numéro pokédex : ${pokemon.id}</small>
                                 </div>
@@ -65,7 +67,7 @@ export default class PokemonAll {
     renderPagination() {
         // Gestion de l'affichage de la balise de page précédente
         let previousHref = `#/pokemons/page/${this.currentPage - 1}`;
-        let previousLink = `<a class="btn btn-sm btn-outline-secondary" href="${previousHref}">Page ${this.currentPage - 1}</a>`;
+        let previousLink = `<a class="btn btn-sm btn-outline-secondary" href="${previousHref}"><i class="fas fa-chevron-left"></i> Page ${this.currentPage - 1}</a>`;
         // Si on est sur la 1ère page, on n'affiche pas la balise
         if (this.currentPage === 1) {
             previousLink = ``;
@@ -73,7 +75,7 @@ export default class PokemonAll {
 
         // Gestion de l'affichage de la balise de page suivante
         let nextHref = `#/pokemons/page/${this.currentPage + 1}`;
-        let nextLink = `<a class="btn btn-sm btn-outline-secondary" href="${nextHref}">Page ${this.currentPage + 1}</a>`;
+        let nextLink = `<a class="btn btn-sm btn-outline-secondary" href="${nextHref}">Page ${this.currentPage + 1} <i class="fas fa-chevron-right"></i></a>`;
         // Si on est sur la dernière page, on n'affiche pas la balise
         if (this.currentPage === this.totalPages) {
             nextLink = ``;

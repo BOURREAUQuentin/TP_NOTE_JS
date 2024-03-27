@@ -18,11 +18,12 @@ export default class PokemonFiltre {
                         /*html*/`
                         <div class="col">
                             <div class="card shadow-sm">
+                                <img src="${pokemon.image}" class="card-img-top" alt="${pokemon.nom}">
                                 <div class="card-body">
-                                    <p class="card-text">${pokemon.description ? pokemon.description.slice(0,100) : ''}</p>
+                                    <p class="card-text">${pokemon.description ? pokemon.description.slice(0,120) : ''}...</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary">Voir ${pokemon.nom}</a>
+                                            <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i> Voir ${pokemon.nom}</a>
                                         </div>
                                         <small class="text-body-secondary">Numéro pokédex : ${pokemon.id}</small>
                                     </div>
@@ -34,8 +35,8 @@ export default class PokemonFiltre {
                     '<h6>Aucun pokémon trouvé !</h6>'
                 }
             </div>
-            <p><a href="/">Retour à l'accueil</a></p>
-            <p><a href="#/pokemons/page/1">Retour à tous les pokémons</a></p>
+            <a href="/" class="btn btn-sm btn-outline-secondary"><i class="fas fa-home"></i> Accueil</a>
+            <a href="#/pokemons/page/1" class="btn btn-sm btn-outline-secondary"><i class="fas fa-paw"></i> Tous les pokémons</a>
         `;
         return view;
     }
