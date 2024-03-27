@@ -2,7 +2,7 @@ import { ENDPOINT_POKEMONS, ENDPOINT_TYPES } from '../config.js'
 
 export default class PokemonProvider {
 
-    static fetchPokemons = async (limit = 10) => {
+    static fetchPokemons = async () => {
         const options = {
            method: 'GET',
            headers: {
@@ -10,7 +10,7 @@ export default class PokemonProvider {
            }
        };
        try {
-           const response = await fetch(`${ENDPOINT_POKEMONS}?_limit=${limit}`, options)
+           const response = await fetch(`${ENDPOINT_POKEMONS}`, options)
            const json = await response.json();
            return json
        } catch (err) {

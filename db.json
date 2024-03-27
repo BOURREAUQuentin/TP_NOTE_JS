@@ -38,7 +38,7 @@
       ],
       "cri": "Bulbizarre!",
       "image": "../../../images/bulbizarre.png",
-      "note": 4
+      "note": 5
     },
     {
       "id": "4",
@@ -524,23 +524,361 @@
       "cri": "Léviator!",
       "image": "../../../images/leviator.png",
       "note": 3
-    }
+    },
+    {
+      "id": "10",
+      "nom": "Chenipan",
+      "types": [
+        "13"
+      ],
+      "stats_base": {
+        "PV": 45,
+        "Attaque": 30,
+        "Défense": 35,
+        "Vitesse": 20
+      },
+      "description": "Chenipan est un petit Pokémon chenille qui se nourrit de feuilles. Il est souvent vu en train de grignoter tranquillement dans les prairies verdoyantes.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Chrysacier"
+      },
+      "taux_capture": 255,
+      "taille": "0.3 m",
+      "poids": "2.9 kg",
+      "faiblesses": [
+        "5",
+        "16"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Écaille Dure"
+      ],
+      "localisation": [
+        "Forêt de Jade",
+        "Champ Vermeil"
+      ],
+      "cri": "Chenipan!",
+      "image": "../../../images/chenipan.png",
+      "note": 0
+    },
+    {
+      "id": "16",
+      "nom": "Roucool",
+      "types": [
+        "5",
+        "7"
+      ],
+      "stats_base": {
+        "PV": 40,
+        "Attaque": 45,
+        "Défense": 40,
+        "Vitesse": 56
+      },
+      "description": "Roucool est un petit Pokémon oiseau aux ailes puissantes. Il est capable de voler sur de longues distances sans se fatiguer.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Roucoups"
+      },
+      "taux_capture": 255,
+      "taille": "0.3 m",
+      "poids": "1.8 kg",
+      "faiblesses": [
+        "2",
+        "14"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Regard Vif"
+      ],
+      "localisation": [
+        "Plaine Enchantée",
+        "Cime Celeste"
+      ],
+      "cri": "Roucool!",
+      "image": "../../../images/roucool.png",
+      "note": 0
+    },
+    {
+      "id": "40",
+      "nom": "Rondoudou",
+      "types": [
+        "15",
+        "7"
+      ],
+      "stats_base": {
+        "PV": 115,
+        "Attaque": 45,
+        "Défense": 20,
+        "Vitesse": 20
+      },
+      "description": "Rondoudou est un Pokémon adorateur de la paix et de l'amour. Il est souvent vu chantant de douces mélodies pour apaiser les conflits.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Grodoudou"
+      },
+      "taux_capture": 170,
+      "taille": "0.3 m",
+      "poids": "5.5 kg",
+      "faiblesses": [
+        "1",
+        "17"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Joli Sourire"
+      ],
+      "localisation": [
+        "Forêt de Jade",
+        "Vallée Harmonieuse"
+      ],
+      "cri": "Rondoudou!",
+      "image": "../../../images/rondoudou.png",
+      "note": 0
+    },
+    {
+      "id": "53",
+      "nom": "Persian",
+      "types": [
+        "7"
+      ],
+      "stats_base": {
+        "PV": 65,
+        "Attaque": 70,
+        "Défense": 60,
+        "Vitesse": 115
+      },
+      "description": "Persian est un Pokémon félin majestueux. Il est connu pour sa grâce et sa vitesse exceptionnelle.",
+      "evolution": {
+        "pré-évolution": "Miaouss",
+        "évolution": null
+      },
+      "taux_capture": 90,
+      "taille": "1.0 m",
+      "poids": "32.0 kg",
+      "faiblesses": [
+        "2"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Fuite",
+        "Technicien"
+      ],
+      "localisation": [
+        "Cité Azur",
+        "Port Azur"
+      ],
+      "cri": "Persian!",
+      "image": "../../../images/persian.png",
+      "note": 0
+    },
+    {
+      "id": "67",
+      "nom": "Machopeur",
+      "types": [
+        "11"
+      ],
+      "stats_base": {
+        "PV": 80,
+        "Attaque": 100,
+        "Défense": 70,
+        "Vitesse": 45
+      },
+      "description": "Machopeur est un Pokémon musclé et robuste. Il est souvent vu en train d'entraîner son corps pour devenir plus fort.",
+      "evolution": {
+        "pré-évolution": "Machoc",
+        "évolution": "Mackogneur"
+      },
+      "taux_capture": 90,
+      "taille": "1.5 m",
+      "poids": "70.5 kg",
+      "faiblesses": [
+        "11",
+        "16"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Corps Sain",
+        "Téméraire"
+      ],
+      "localisation": [
+        "Arène de Combat",
+        "Colline de la Brise"
+      ],
+      "cri": "Machopeur!",
+      "image": "../../../images/machopeur.png",
+      "note": 0
+    },
+    {
+      "id": "77",
+      "nom": "Ponyta",
+      "types": [
+        "8"
+      ],
+      "stats_base": {
+        "PV": 50,
+        "Attaque": 85,
+        "Défense": 55,
+        "Vitesse": 90
+      },
+      "description": "Ponyta est un Pokémon équidé majestueux. Il est connu pour sa crinière de feu et sa vitesse incroyable.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Galopa"
+      },
+      "taux_capture": 190,
+      "taille": "1.0 m",
+      "poids": "30.0 kg",
+      "faiblesses": [
+        "2"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Fuite",
+        "Corps Ardent"
+      ],
+      "localisation": [
+        "Plaine Enchantée",
+        "Colline de la Brise"
+      ],
+      "cri": "Ponyta!",
+      "image": "../../../images/ponyta.png",
+      "note": 0
+    },
+    {
+      "id": "136",
+      "nom": "Pyroli",
+      "types": [
+        "8"
+      ],
+      "stats_base": {
+        "PV": 65,
+        "Attaque": 130,
+        "Défense": 60,
+        "Vitesse": 65
+      },
+      "description": "Pyroli est un Pokémon félin doté de pouvoirs pyrokinétiques. Il est capable de contrôler et de manipuler le feu à sa guise.",
+      "evolution": {
+        "pré-évolution": "Evoli",
+        "évolution": null
+      },
+      "taux_capture": 45,
+      "taille": "0.9 m",
+      "poids": "25.0 kg",
+      "faiblesses": [
+        "2",
+        "5",
+        "8"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Absorb Volt"
+      ],
+      "localisation": [
+        "Mont Selenite",
+        "Mont Argenté"
+      ],
+      "cri": "Pyroli!",
+      "image": "../../../images/pyroli.png",
+      "note": 0
+    },
+    {
+      "id": "155",
+      "nom": "Héricendre",
+      "types": [
+        "8"
+      ],
+      "stats_base": {
+        "PV": 39,
+        "Attaque": 52,
+        "Défense": 43,
+        "Vitesse": 65
+      },
+      "description": "Héricendre est un Pokémon hérisson au dos enflammé. Il est souvent vu en train de rouler en boule pour se protéger.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Feurisson"
+      },
+      "taux_capture": 45,
+      "taille": "0.5 m",
+      "poids": "7.9 kg",
+      "faiblesses": [
+        "2"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Brasier"
+      ],
+      "localisation": [
+        "Mont Selenite",
+        "Mont Argenté"
+      ],
+      "cri": "Héricendre!",
+      "image": "../../../images/hericendre.png",
+      "note": 0
+    },
+    {
+      "id": "218",
+      "nom": "Limagma",
+      "types": [
+        "6",
+        "8"
+      ],
+      "stats_base": {
+        "PV": 50,
+        "Attaque": 50,
+        "Défense": 120,
+        "Vitesse": 20
+      },
+      "description": "Limagma est un Pokémon escargot volcanique. Son corps est constamment en fusion et il laisse une traînée de lave derrière lui.",
+      "evolution": {
+        "pré-évolution": null,
+        "évolution": "Volcaropod"
+      },
+      "taux_capture": 190,
+      "taille": "0.7 m",
+      "poids": "35.0 kg",
+      "faiblesses": [
+        "2",
+        "5",
+        "8"
+      ],
+      "résistances": [],
+      "capacités_spéciales": [
+        "Corps Ardent"
+      ],
+      "localisation": [
+        "Mont Selenite",
+        "Mont Argenté"
+      ],
+      "cri": "Limagma!",
+      "image": "../../../images/limagma.png",
+      "note": 0
+    }    
   ],
   "types": [
     {
       "id": "1",
       "nomType": "Poison",
-      "listePokemonsType": ["1", "23", "33"]
+      "listePokemonsType": [
+        "1",
+        "23",
+        "33"
+      ]
     },
     {
       "id": "2",
       "nomType": "Plante",
-      "listePokemonsType": ["1"]
+      "listePokemonsType": [
+        "1",
+        "77"
+      ]
     },
     {
       "id": "3",
       "nomType": "Électrique",
-      "listePokemonsType": ["25"]
+      "listePokemonsType": [
+        "25"
+      ]
     },
     {
       "id": "4",
@@ -550,27 +888,46 @@
     {
       "id": "5",
       "nomType": "Vol",
-      "listePokemonsType": ["6", "83", "130"]
+      "listePokemonsType": [
+        "6",
+        "77"
+      ]
     },
     {
       "id": "6",
       "nomType": "Sol",
-      "listePokemonsType": []
+      "listePokemonsType": [
+        "218"
+      ]
     },
     {
       "id": "7",
       "nomType": "Normal",
-      "listePokemonsType": ["52", "83"]
+      "listePokemonsType": [
+        "52",
+        "83"
+      ]
     },
     {
       "id": "8",
       "nomType": "Feu",
-      "listePokemonsType": ["4", "6", "78"]
+      "listePokemonsType": [
+        "4",
+        "6",
+        "77",
+        "136",
+        "155",
+        "218"
+      ]
     },
     {
       "id": "9",
       "nomType": "Eau",
-      "listePokemonsType": ["7", "9", "130"]
+      "listePokemonsType": [
+        "7",
+        "9",
+        "130"
+      ]
     },
     {
       "id": "10",
@@ -585,7 +942,9 @@
     {
       "id": "12",
       "nomType": "Psy",
-      "listePokemonsType": ["64"]
+      "listePokemonsType": [
+        "64"
+      ]
     },
     {
       "id": "13",
@@ -612,5 +971,5 @@
       "nomType": "Ténèbres",
       "listePokemonsType": []
     }
-  ]
+  ]  
 }
