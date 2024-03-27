@@ -4,8 +4,8 @@
       "id": "1",
       "nom": "Bulbizarre",
       "types": [
-        "2",
-        "1"
+        "1",
+        "2"
       ],
       "stats_base": {
         "PV": 45,
@@ -84,8 +84,8 @@
       "id": "6",
       "nom": "Dracaufeu",
       "types": [
-        "2",
-        "5"
+        "5",
+        "8"
       ],
       "stats_base": {
         "PV": 78,
@@ -367,7 +367,7 @@
       "id": "64",
       "nom": "Kadabra",
       "types": [
-        "13"
+        "12"
       ],
       "stats_base": {
         "PV": 40,
@@ -407,7 +407,7 @@
       "id": "78",
       "nom": "Galopa",
       "types": [
-        "7"
+        "8"
       ],
       "stats_base": {
         "PV": 65,
@@ -445,7 +445,7 @@
       "id": "83",
       "nom": "Canarticho",
       "types": [
-        "14",
+        "5",
         "7"
       ],
       "stats_base": {
@@ -488,8 +488,8 @@
       "id": "130",
       "nom": "Léviator",
       "types": [
-        "9",
-        "5"
+        "5",
+        "9"
       ],
       "stats_base": {
         "PV": 95,
@@ -530,27 +530,17 @@
     {
       "id": "1",
       "nomType": "Poison",
-      "listePokemonsType": [
-        "2",
-        "23",
-        "33"
-      ]
+      "listePokemonsType": ["1", "23", "33"]
     },
     {
       "id": "2",
       "nomType": "Plante",
-      "listePokemonsType": [
-        "2",
-        "6"
-      ]
+      "listePokemonsType": ["1"]
     },
     {
       "id": "3",
       "nomType": "Électrique",
-      "listePokemonsType": [
-        "1",
-        "25"
-      ]
+      "listePokemonsType": ["25"]
     },
     {
       "id": "4",
@@ -560,10 +550,7 @@
     {
       "id": "5",
       "nomType": "Vol",
-      "listePokemonsType": [
-        "6",
-        "130"
-      ]
+      "listePokemonsType": ["6", "83", "130"]
     },
     {
       "id": "6",
@@ -573,74 +560,55 @@
     {
       "id": "7",
       "nomType": "Normal",
-      "listePokemonsType": [
-        "52",
-        "78",
-        "83"
-      ]
+      "listePokemonsType": ["52", "83"]
     },
     {
       "id": "8",
       "nomType": "Feu",
-      "listePokemonsType": [
-        "4"
-      ]
+      "listePokemonsType": ["4", "6", "78"]
     },
     {
       "id": "9",
       "nomType": "Eau",
-      "listePokemonsType": [
-        "9",
-        "54",
-        "130"
-      ]
+      "listePokemonsType": ["7", "9", "130"]
     },
     {
       "id": "10",
-      "nomType": "Plante",
-      "listePokemonsType": []
-    },
-    {
-      "id": "11",
       "nomType": "Glace",
       "listePokemonsType": []
     },
     {
-      "id": "12",
+      "id": "11",
       "nomType": "Combat",
       "listePokemonsType": []
     },
     {
-      "id": "13",
+      "id": "12",
       "nomType": "Psy",
-      "listePokemonsType": [
-        "64"
-      ]
+      "listePokemonsType": ["64"]
+    },
+    {
+      "id": "13",
+      "nomType": "Insecte",
+      "listePokemonsType": []
     },
     {
       "id": "14",
-      "nomType": "Insecte",
-      "listePokemonsType": [
-        "83"
-      ]
-    },
-    {
-      "id": "15",
       "nomType": "Roche",
       "listePokemonsType": []
     },
     {
-      "id": "16",
+      "id": "15",
       "nomType": "Spectre",
       "listePokemonsType": []
     },
     {
-      "id": "17",
+      "id": "16",
       "nomType": "Dragon",
       "listePokemonsType": []
     },
     {
-      "id": "18",
+      "id": "17",
       "nomType": "Ténèbres",
       "listePokemonsType": []
     }
