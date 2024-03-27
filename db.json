@@ -159,7 +159,7 @@
       ],
       "cri": "Carapuce!",
       "image": "../../../images/carapuce.png",
-      "note": 0
+      "note": 2
     },
     {
       "id": "23",
@@ -540,6 +540,7 @@
       "id": "2",
       "nomType": "Plante",
       "listePokemonsType": [
+        "2",
         "6"
       ]
     },

@@ -70,6 +70,22 @@ export default class PokemonShow {
             this.handleStarClick(view);
         }, 0);
 
+    setTimeout(() => {
+        this.handleStarClick();
+    }, 0);
+
+    return view;
+    }
+
+    handleStarClick() {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                const value = index + 1;
+                PokemonProvider.changeRating(this.pokemon.id, value);
+                location.reload();
+            });
+        });
         return view;
     }
 
