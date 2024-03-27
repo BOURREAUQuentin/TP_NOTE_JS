@@ -1,10 +1,9 @@
-// Instantiate API
 import PokemonProvider from "./../../services/PokemonProvider.js";
 
 export default class Home {
 
     async render() {
-        let pokemons = await PokemonProvider.fetchPokemons(3)
+        let pokemons = await PokemonProvider.fetchPokemons(3);
         let html = pokemons.map(pokemon =>
             /*html*/`
             <div class="col">
@@ -14,7 +13,7 @@ export default class Home {
                     <p class="card-text">${pokemon.description ? pokemon.description.slice(0, 120) : ''}...</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                        <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i> détails sur ${pokemon.nom}</a>
+                            <a href="#/pokemons/${pokemon.id}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i> détails sur ${pokemon.nom}</a>
                         </div>
                         <small class="text-body-secondary">Numéro pokédex : ${pokemon.id}</small>
                     </div>
@@ -23,8 +22,13 @@ export default class Home {
             </div>
             `
         ).join('\n ');
-        
+
         return /*html*/`
+            <audio id="pokemon_home" autoplay>
+                <source src="./sounds/pokemon_home.mp3" type="audio/mp3">
+                Votre navigateur ne supporte pas l'audio HTML.
+            </audio>
+            <img src="./images/fond_ecran.jpg" width="100%" height="auto">
             <section class="py-5 text-center container">
                 <div class="row py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
