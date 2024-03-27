@@ -65,22 +65,34 @@ export default class PokemonAll {
     }
 
     renderPagination() {
-        // Gestion de l'affichage de la balise de page précédente
-        let previousHref = `#/pokemons/page/${this.currentPage - 1}`;
-        let previousLink = `<a class="btn btn-sm btn-outline-secondary" href="${previousHref}"><i class="fas fa-chevron-left"></i> Page ${this.currentPage - 1}</a>`;
-        // Si on est sur la 1ère page, on n'affiche pas la balise
-        if (this.currentPage === 1) {
-            previousLink = ``;
+        let paginationLinks = '';
+    
+        // Ajout du lien vers la page précédente
+        paginationLinks += `<li class="page-item ${this.currentPage === 1 ? 'disabled' : ''}">
+                                <a class="page-link" href="#/pokemons/page/${this.currentPage - 1}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>`;
+    
+        // Boucle pour chaque page disponible
+        for (let page = 1; page <= this.totalPages; page++) {
+            paginationLinks += `<li class="page-item ${this.currentPage === page ? 'active' : ''}">
+                                    <a class="page-link" href="#/pokemons/page/${page}">${page}</a>
+                                </li>`;
         }
-
-        // Gestion de l'affichage de la balise de page suivante
-        let nextHref = `#/pokemons/page/${this.currentPage + 1}`;
-        let nextLink = `<a class="btn btn-sm btn-outline-secondary" href="${nextHref}">Page ${this.currentPage + 1} <i class="fas fa-chevron-right"></i></a>`;
-        // Si on est sur la dernière page, on n'affiche pas la balise
-        if (this.currentPage === this.totalPages) {
-            nextLink = ``;
-        }
-
-        return `${previousLink} ${nextLink}`;
+    
+        // Ajout du lien vers la page suivante
+        paginationLinks += `<li class="page-item ${this.currentPage === this.totalPages ? 'disabled' : ''}">
+                                <a class="page-link" href="#/pokemons/page/${this.currentPage + 1}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>`;
+    
+        return `<nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        ${paginationLinks}
+                    </ul>
+                </nav>`;
     }
+    
 }
